@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kitchen Remodeling in Houston, TX – ABF Remodeling</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #C0392B;
+    --red-dark: #A93226;
+    --brown-bar: #A97628;
+    --gold: #C5993A;
+    --gold-light: #D9B15E;
+    --gold-pale: #F0DEB0;
+    --dark-bg: #2B2B2B;
+    --dark-footer: #262626;
+    --charcoal: #1E1E1E;
+    --white: #FFFFFF;
+    --off-white: #F8F6F2;
+    --light-gray: #F5F5F5;
+    --warm-gray: #E8E4DC;
+    --text-dark: #1A1A1A;
+    --text-body: #4A4A4A;
+    --text-muted: #7A7A7A;
+    --font: 'Roboto', sans-serif;
+    --ease: cubic-bezier(0.23, 1, 0.32, 1);
+    --shadow-md: 0 6px 24px rgba(0,0,0,0.08);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+    --radius: 8px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text-dark); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 28px; font-family: var(--font); font-size: 0.88rem; font-weight: 700;
+    letter-spacing: 0.02em; border-radius: 4px; border: none; cursor: pointer;
+    transition: all 0.3s var(--ease); text-transform: uppercase; white-space: nowrap;
+  }
+  .btn-red { background: var(--red); color: var(--white); }
+  .btn-red:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(192,57,43,0.25); }
+  .btn-gold { background: var(--gold); color: var(--white); }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-white { background: var(--white); color: var(--text-dark); }
+  .btn-white:hover { background: var(--off-white); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .btn-outline-white { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.4); }
+  .btn-outline-white:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+  .btn-outline-dark { background: transparent; color: var(--text-dark); border: 2px solid var(--text-dark); }
+  .btn-outline-dark:hover { background: var(--text-dark); color: var(--white); }
+  .btn-lg { padding: 16px 32px; font-size: 0.92rem; }
+
+  /* ═══ TOP BAR — brown/gold gradient matching screenshot ═══ */
+  .top-bar {
+    background: linear-gradient(135deg, #A97628 0%, #B8842F 50%, #A97628 100%);
+    color: var(--white); font-size: 0.82rem; font-weight: 400;
+    padding: 10px 0; text-align: center; letter-spacing: 0.03em;
+  }
+
+  /* ═══ HEADER — white bg, red nav links matching screenshot ═══ */
+  .header {
+    background: var(--white); position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .header .container {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 14px; padding-bottom: 14px; gap: 32px;
+  }
+  .logo-link { flex-shrink: 0; }
+  .logo-link img { height: 56px; width: auto; }
+  .nav { display: flex; align-items: center; gap: 0; }
+  .nav a { font-size: 0.88rem; font-weight: 500; padding: 8px 16px; transition: color 0.2s; color: var(--red); }
+  .nav a:hover { color: var(--red-dark); }
+  .nav a.nav-cta {
+    background: var(--red); color: var(--white); font-weight: 700;
+    border-radius: 4px; padding: 10px 22px; margin-left: 8px;
+  }
+  .nav a.nav-cta:hover { background: var(--red-dark); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 200; }
+  .hamburger span { width: 24px; height: 2px; background: var(--text-dark); border-radius: 2px; }
+
+  /* ═══ HERO ═══ */
+  .hero { position: relative; min-height: 500px; display: flex; align-items: center; overflow: hidden; background: var(--charcoal); }
+  .hero-bg { position: absolute; inset: 0; }
+  .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+  .hero::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(135deg, rgba(30,30,30,0.88) 0%, rgba(30,30,30,0.65) 50%, rgba(30,30,30,0.45) 100%); }
+  .hero .container { position: relative; z-index: 2; padding-top: 64px; padding-bottom: 64px; }
+  .hero-content { max-width: 620px; }
+  .hero-badge { display: inline-block; background: rgba(197,153,58,0.2); border: 1px solid rgba(197,153,58,0.4); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 16px; border-radius: 4px; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(2rem, 3.8vw, 2.8rem); font-weight: 900; line-height: 1.15; color: var(--white); margin-bottom: 16px; }
+  .hero-desc { font-size: 1.02rem; color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 28px; max-width: 500px; font-weight: 300; }
+  .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero-trust { margin-top: 24px; display: flex; gap: 24px; font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+  .hero-trust strong { color: rgba(255,255,255,0.85); }
+
+  /* ═══ CTA BANNERS ═══ */
+  .cta-banner { padding: 44px 0; position: relative; overflow: hidden; }
+  .cta-banner .container { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .cta-banner-text h3 { font-size: 1.5rem; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+  .cta-banner-text p { font-size: 0.92rem; line-height: 1.6; max-width: 520px; }
+  .cta-banner-actions { display: flex; gap: 12px; flex-wrap: wrap; flex-shrink: 0; }
+
+  .cta-financing { background: linear-gradient(135deg, var(--gold) 0%, #B8882E 100%); color: var(--white); }
+  .cta-financing::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.08); }
+  .cta-financing .cta-banner-text p { color: rgba(255,255,255,0.85); }
+
+  .cta-quote { background: var(--red); color: var(--white); }
+  .cta-quote::before { content: ''; position: absolute; top: -80px; right: 10%; width: 180px; height: 180px; border-radius: 50%; background: rgba(255,255,255,0.06); }
+  .cta-quote .cta-banner-text p { color: rgba(255,255,255,0.8); }
+
+  .cta-call { background: var(--dark-bg); color: var(--white); }
+  .cta-call::before { content: ''; position: absolute; bottom: -60px; left: -40px; width: 160px; height: 160px; border-radius: 50%; background: rgba(197,153,58,0.08); }
+  .cta-call .cta-banner-text p { color: rgba(255,255,255,0.65); }
+  .cta-call .phone-number { font-size: 1.8rem; font-weight: 900; color: var(--gold-light); margin-top: 10px; }
+
+  /* ═══ SECTIONS ═══ */
+  .section-header { margin-bottom: 44px; }
+  .section-header .overline { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+  .section-header h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); font-weight: 700; line-height: 1.2; }
+  .section-header p { margin-top: 10px; color: var(--text-body); max-width: 540px; font-size: 0.92rem; }
+
+  .services-section { padding: 72px 0; background: var(--white); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+  .service-pill { display: flex; align-items: center; gap: 14px; padding: 18px 22px; background: var(--light-gray); border-radius: var(--radius); border: 1px solid transparent; transition: all 0.3s var(--ease); }
+  .service-pill:hover { background: var(--white); border-color: var(--red); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .service-icon { width: 42px; height: 42px; border-radius: 8px; background: var(--red); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--white); font-size: 1rem; }
+  .service-pill h4 { font-size: 0.9rem; font-weight: 500; }
+
+  .why-section { padding: 72px 0; background: var(--light-gray); }
+  .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .why-card { text-align: center; padding: 28px 18px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--warm-gray); transition: all 0.3s var(--ease); }
+  .why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
+  .why-num { font-size: 2rem; font-weight: 900; color: var(--red); line-height: 1; margin-bottom: 8px; }
+  .why-card h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
+  .why-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+
+  .ba-section { padding: 72px 0; background: var(--white); }
+  .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .ba-card { border-radius: var(--radius); overflow: hidden; position: relative; box-shadow: var(--shadow-md); }
+  .ba-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; transition: transform 0.5s var(--ease); }
+  .ba-card:hover img { transform: scale(1.03); }
+  .ba-label { position: absolute; top: 14px; left: 14px; background: var(--dark-bg); color: var(--white); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 14px; border-radius: 4px; }
+  .ba-label-after { background: var(--gold); }
+
+  .process-section { padding: 72px 0; background: var(--light-gray); }
+  .process-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 44px; }
+  .process-step { text-align: center; padding: 24px 12px; position: relative; }
+  .step-num { width: 46px; height: 46px; border-radius: 50%; background: var(--red); color: var(--white); font-size: 1.1rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+  .process-step h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 4px; }
+  .process-step p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.45; }
+  .step-connector { position: absolute; top: 46px; right: -12px; width: 24px; height: 2px; background: var(--warm-gray); }
+  .process-step:last-child .step-connector { display: none; }
+
+  .faq-section { padding: 72px 0; background: var(--white); }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .faq-item { border: 1px solid var(--warm-gray); border-radius: var(--radius); overflow: hidden; transition: border-color 0.3s; }
+  .faq-item:hover { border-color: var(--red); }
+  .faq-q { padding: 18px 22px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 700; font-size: 0.9rem; gap: 12px; }
+  .faq-q::after { content: '+'; font-size: 1.3rem; color: var(--red); flex-shrink: 0; font-weight: 400; }
+  .faq-item.open .faq-q::after { content: '−'; }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease), padding 0.3s; font-size: 0.88rem; color: var(--text-body); line-height: 1.7; padding: 0 22px; }
+  .faq-item.open .faq-a { max-height: 400px; padding: 0 22px 18px; }
+
+  /* ═══ FOOTER — Matching screenshot exactly ═══ */
+  .footer { background: var(--dark-footer); color: rgba(255,255,255,0.7); padding: 56px 0 0; }
+  .footer-main { display: grid; grid-template-columns: 1.4fr 1.2fr 0.8fr 1fr; gap: 40px; padding-bottom: 40px; }
+  .footer-brand img { height: 64px; margin-bottom: 20px; }
+  .footer-brand p { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.6); margin-bottom: 18px; }
+  .footer-social { display: flex; gap: 10px; align-items: center; }
+  .footer-social span { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-right: 4px; }
+  .footer-social a { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.7); transition: all 0.3s; }
+  .footer-social a:hover { background: var(--red); color: var(--white); }
+  .footer h4 { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 18px; }
+  .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px; font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
+  .footer-contact-item .icon { flex-shrink: 0; margin-top: 2px; font-size: 0.9rem; }
+  .footer-contact-item a { color: rgba(255,255,255,0.65); transition: color 0.2s; }
+  .footer-contact-item a:hover { color: var(--white); }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { font-size: 0.88rem; color: rgba(255,255,255,0.65); transition: color 0.2s; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-badges { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .footer-badge { width: 100px; height: 80px; background: rgba(255,255,255,0.06); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; color: rgba(255,255,255,0.4); text-align: center; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.3; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 18px 0; text-align: center; font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+  .footer-bottom a { color: var(--gold-light); }
+  .footer-bottom a:hover { color: var(--gold-pale); }
+
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-up { animation: fadeInUp 0.7s var(--ease) forwards; opacity: 0; }
+  .d1 { animation-delay: 0.1s; } .d2 { animation-delay: 0.2s; } .d3 { animation-delay: 0.3s; } .d4 { animation-delay: 0.4s; }
+
+  @media (max-width: 1024px) {
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-steps { grid-template-columns: repeat(3, 1fr); }
+    .step-connector { display: none !important; }
+    .faq-grid { grid-template-columns: 1fr; }
+    .footer-main { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    .nav { display: none; }
+    .hamburger { display: flex; }
+    .nav.open { display: flex; flex-direction: column; position: fixed; inset: 0; background: var(--white); z-index: 150; justify-content: center; align-items: center; gap: 6px; }
+    .nav.open a { font-size: 1.05rem; padding: 12px 24px; }
+    .ba-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
+    .cta-banner .container { flex-direction: column; text-align: center; }
+    .cta-banner-actions { justify-content: center; }
+    .footer-main { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .footer-badges { flex-direction: row; }
+  }
+  @media (max-width: 480px) {
+    .process-steps { grid-template-columns: 1fr; }
+    .hero-buttons { flex-direction: column; }
+    .hero-buttons .btn { width: 100%; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">Est. 1999 · BBB Accredited · 34+ Google Reviews</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <a href="https://abfremodeling.com" class="logo-link">
+      <img src="https://abfremodeling.com/wp-content/uploads/2026/03/New-Abf-Logo-1.webp" alt="ABF Remodeling">
+    </a>
+    <nav class="nav" id="mainNav">
+      <a href="https://abfremodeling.com/">Home</a>
+      <a href="https://abfremodeling.com/about">About</a>
+      <a href="https://abfremodeling.com/kitchen-remodeling/">Our Services</a>
+      <a href="https://abfremodeling.com/kitchen-bath-remodeling">Project Portfolio</a>
+      <a href="https://abfremodeling.com/financing">Finance</a>
+      <a href="https://abfremodeling.com/blog">Blog</a>
+      <a href="https://abfremodeling.com/testimonials">Testimonials</a>
+      <a href="https://abfremodeling.com/contact-us" class="nav-cta">Contact Us</a>
+    </nav>
+    <div class="hamburger" onclick="document.getElementById('mainNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img src="https://abfremodeling.com/wp-content/uploads/2022/07/5.jpg" alt="Kitchen with Island"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge fade-up">Licensed & Insured Contractors</div>
+      <h1 class="fade-up d1">Kitchen Remodeling in Houston, TX</h1>
+      <p class="hero-desc fade-up d2">Transform your kitchen into a modern, functional space designed for your lifestyle. High-quality renovations that improve both the look and value of your home.</p>
+      <div class="hero-buttons fade-up d3">
+        <a href="https://abfremodeling.com/contact-us/" class="btn btn-red btn-lg">Get Your Free Estimate</a>
+        <a href="tel:281-855-3400" class="btn btn-outline-white btn-lg">Call 281-855-3400</a>
+      </div>
+      <div class="hero-trust fade-up d4">
+        <span><strong>25+</strong> Years Experience</span>
+        <span><strong>BBB</strong> Accredited</span>
+        <span><strong>34+</strong> Google Reviews</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA #1: FINANCING -->
+<div class="cta-banner cta-financing">
+  <div class="container">
+    <div class="cta-banner-text">
+      <h3>Financing Available for Your Kitchen Project</h3>
+      <p>Don't let budget hold you back. We offer flexible financing options to help make your dream kitchen a reality — apply in minutes.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a href="https://abfremodeling.com/financing/" class="btn btn-white btn-lg">Apply Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT WE OFFER -->
+<section class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="overline">What We Offer</div>
+      <h2>Complete Kitchen Remodeling Services</h2>
+      <p>From design to construction, we handle every detail of your kitchen transformation.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-pill"><div class="service-icon">🍳</div><h4>Custom Kitchen Design</h4></div>
+      <div class="service-pill"><div class="service-icon">🗄️</div><h4>Cabinet Installation</h4></div>
+      <div class="service-pill"><div class="service-icon">🪨</div><h4>Granite & Quartz Countertops</h4></div>
+      <div class="service-pill"><div class="service-icon">🔲</div><h4>Backsplash Installation</h4></div>
+      <div class="service-pill"><div class="service-icon">💡</div><h4>Lighting Upgrades</h4></div>
+      <div class="service-pill"><div class="service-icon">🏠</div><h4>Flooring Installation</h4></div>
+      <div class="service-pill"><div class="service-icon">📐</div><h4>Open-Concept Layouts</h4></div>
+      <div class="service-pill"><div class="service-icon">🔧</div><h4>Plumbing & Electrical</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <div class="overline">Why Choose ABF Remodeling</div>
+      <h2>Houston's Trusted Kitchen Contractor</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-num">25+</div><h4>Years of Experience</h4><p>Trusted kitchen remodeling expertise since 1999.</p></div>
+      <div class="why-card"><div class="why-num">✓</div><h4>Licensed & Insured</h4><p>Full licensing and insurance for your peace of mind.</p></div>
+      <div class="why-card"><div class="why-num">★</div><h4>Quality Craftsmanship</h4><p>High-quality materials and meticulous attention to detail.</p></div>
+      <div class="why-card"><div class="why-num">$</div><h4>Transparent Pricing</h4><p>Detailed, honest estimates with no hidden costs.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE & AFTER -->
+<section class="ba-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <div class="overline">Our Work</div>
+      <h2>See the Transformation</h2>
+      <p style="margin-left:auto;margin-right:auto;">Real results from a recent Sugarland kitchen remodel — from dated to modern in weeks.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-card"><span class="ba-label">Before</span><img src="https://abfremodeling.com/wp-content/uploads/2026/03/IMG_75231-1024x768.jpg" alt="Kitchen Before"></div>
+      <div class="ba-card"><span class="ba-label ba-label-after">After</span><img src="https://abfremodeling.com/wp-content/uploads/2026/03/IMG_77341-1024x768.jpg" alt="Kitchen After"></div>
+    </div>
+    <div style="text-align:center; margin-top:28px;">
+      <a href="https://abfremodeling.com/kitchen-bath-remodeling" class="btn btn-outline-dark">View Full Project Portfolio →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA #2: FREE QUOTE -->
+<div class="cta-banner cta-quote">
+  <div class="container">
+    <div class="cta-banner-text">
+      <h3>Request a Free Kitchen Estimate</h3>
+      <p>Tell us about your project and we'll schedule a consultation and provide a detailed, transparent quote — no obligation.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a href="https://abfremodeling.com/contact-us/" class="btn btn-white btn-lg">Get Free Quote</a>
+      <a href="https://abfremodeling.com/financing/" class="btn btn-outline-white btn-lg">Get Pre-Approved</a>
+    </div>
+  </div>
+</div>
+
+<!-- OUR PROCESS -->
+<section class="process-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <div class="overline">How It Works</div>
+      <h2>Our Kitchen Remodeling Process</h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step"><div class="step-num">1</div><h4>Free Consultation</h4><p>We discuss your vision, needs, and budget.</p><div class="step-connector"></div></div>
+      <div class="process-step"><div class="step-num">2</div><h4>Design & Planning</h4><p>Our team creates a detailed plan for your kitchen.</p><div class="step-connector"></div></div>
+      <div class="process-step"><div class="step-num">3</div><h4>Material Selection</h4><p>Choose cabinets, countertops, flooring, and more.</p><div class="step-connector"></div></div>
+      <div class="process-step"><div class="step-num">4</div><h4>Construction</h4><p>Our licensed team builds your dream kitchen.</p><div class="step-connector"></div></div>
+      <div class="process-step"><div class="step-num">5</div><h4>Final Walkthrough</h4><p>We ensure everything meets your expectations.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-bottom:36px;">
+      <div class="overline">FAQs</div>
+      <h2>Kitchen Remodeling Questions</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">How much does a kitchen remodel cost in Houston?</div><div class="faq-a">The cost typically ranges from $10,000 to $50,000+, depending on size, materials, and scope. Basic updates run $10K–$20K, mid-range remodels $20K–$40K, and high-end remodels $40K+. We provide detailed, transparent estimates for your specific project.</div></div>
+      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">How long does a kitchen remodel take?</div><div class="faq-a">Most projects take 3 to 8 weeks once construction begins. Timelines depend on project complexity, material availability, and structural changes. We provide a clear timeline before starting.</div></div>
+      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Do I need permits for a kitchen remodel?</div><div class="faq-a">In many cases, permits are required — especially for electrical work, plumbing changes, and structural modifications. Our team handles the permitting process to ensure everything is up to code.</div></div>
+      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Can I stay in my home during the remodel?</div><div class="faq-a">Yes, most homeowners stay in their homes during a kitchen remodel. You may need to set up a temporary kitchen during construction. We work to minimize disruption.</div></div>
+      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">What adds the most value in a kitchen remodel?</div><div class="faq-a">The biggest value upgrades include modern cabinets, quartz or granite countertops, updated lighting, open-concept layouts, and energy-efficient appliances.</div></div>
+      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">What is the best countertop material?</div><div class="faq-a">Popular choices in Houston include quartz (low maintenance, durable) and granite (natural look, heat resistant). Quartz is often preferred for its durability and minimal upkeep.</div></div>
+      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">What flooring works best for Houston kitchens?</div><div class="faq-a">Due to Houston's humidity, the best options are tile (very durable, water-resistant) and luxury vinyl plank (waterproof, cost-effective).</div></div>
+      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Can you open up walls for an open-concept kitchen?</div><div class="faq-a">Yes! We specialize in removing walls and creating open-concept layouts, including structural modifications when needed.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA #3: CALL US -->
+<div class="cta-banner cta-call">
+  <div class="container">
+    <div class="cta-banner-text">
+      <h3>Ready to Remodel Your Kitchen?</h3>
+      <p>Serving Houston, River Oaks, Copperfield, Cypress, Memorial, Sugarland, and surrounding areas.</p>
+      <div class="phone-number"><a href="tel:281-855-3400" style="color:var(--gold-light);">281-855-3400</a></div>
+    </div>
+    <div class="cta-banner-actions">
+      <a href="tel:281-855-3400" class="btn btn-red btn-lg">Call Us Now</a>
+      <a href="https://abfremodeling.com/contact-us/" class="btn btn-outline-white btn-lg">Request Quote Online</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER — Matches their live site layout -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="https://abfremodeling.com/wp-content/uploads/2026/03/New-Abf-Logo-1.webp" alt="ABF Remodeling">
+        <p>A Beautiful Floor, Inc. DBA, ABF Remodeling established in April 1999 located in Houston, Texas is a premier residential and commercial remodeling and flooring company.</p>
+        <div class="footer-social">
+          <span>Follow us:</span>
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="X">X</a>
+          <a href="#" title="Instagram">ig</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item"><span class="icon">📍</span><span>Address<br><a href="https://goo.gl/maps/7HfhP7ds1RCPLx6d6">8719 Hwy 6 N, Houston, TX 77095</a></span></div>
+        <div class="footer-contact-item"><span class="icon">✉️</span><span>Email<br><a href="mailto:info@abfremodeling.com">info@abfremodeling.com</a></span></div>
+        <div class="footer-contact-item"><span class="icon">📞</span><span>Phone<br><a href="tel:281-855-3400">281-855-3400</a></span></div>
+      </div>
+      <div>
+        <h4>Useful link</h4>
+        <ul class="footer-links">
+          <li><a href="https://abfremodeling.com/remodeling">Services</a></li>
+          <li><a href="https://abfremodeling.com/about">About</a></li>
+          <li><a href="https://abfremodeling.com/testimonials">Testimonials</a></li>
+          <li><a href="https://abfremodeling.com/contact-us">Contact Us</a></li>
+          <li><a href="https://abfremodeling.com/kitchen-bath-remodeling">Projects</a></li>
+        </ul>
+      </div>
+      <div class="footer-badges">
+        <div class="footer-badge">NARI®<br>Member</div>
+        <div class="footer-badge">BBB A+<br>Accredited<br>Business</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      Copyright © 2026 ABF Remodeling | All Rights Reserved | <a href="https://abfremodeling.com/privacy-policy-for-abf-remodeling/">Privacy Policy</a> | Designed by <a href="https://theclaymedia.com/">THECLAYMEDIA</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
