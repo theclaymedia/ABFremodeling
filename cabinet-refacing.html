@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cabinet Refacing & Custom Cabinets in Houston, TX – ABF Remodeling</title>
+<meta name="description" content="Refresh your kitchen in as little as 2–4 days with cabinet refacing from ABF Remodeling. Custom cabinets, refacing, and add-ons in Houston, TX.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #C0392B;
+    --red-dark: #A93226;
+    --brown-bar: #A97628;
+    --gold: #C5993A;
+    --gold-light: #D9B15E;
+    --gold-pale: #F0DEB0;
+    --dark-bg: #2B2B2B;
+    --dark-footer: #262626;
+    --charcoal: #1E1E1E;
+    --white: #FFFFFF;
+    --off-white: #F8F6F2;
+    --light-gray: #F5F5F5;
+    --warm-gray: #E8E4DC;
+    --text-dark: #1A1A1A;
+    --text-body: #4A4A4A;
+    --text-muted: #7A7A7A;
+    --font: 'Roboto', sans-serif;
+    --ease: cubic-bezier(0.23, 1, 0.32, 1);
+    --shadow-md: 0 6px 24px rgba(0,0,0,0.08);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+    --radius: 8px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text-dark); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 28px; font-family: var(--font); font-size: 0.88rem; font-weight: 700;
+    letter-spacing: 0.02em; border-radius: 4px; border: none; cursor: pointer;
+    transition: all 0.3s var(--ease); text-transform: uppercase; white-space: nowrap;
+  }
+  .btn-red { background: var(--red); color: var(--white); }
+  .btn-red:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(192,57,43,0.25); }
+  .btn-gold { background: var(--gold); color: var(--white); }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-white { background: var(--white); color: var(--text-dark); }
+  .btn-white:hover { background: var(--off-white); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .btn-outline-white { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.4); }
+  .btn-outline-white:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+  .btn-outline-dark { background: transparent; color: var(--text-dark); border: 2px solid var(--text-dark); }
+  .btn-outline-dark:hover { background: var(--text-dark); color: var(--white); }
+  .btn-lg { padding: 16px 32px; font-size: 0.92rem; }
+
+  /* ═══ TOP BAR ═══ */
+  .top-bar {
+    background: #eb3506;
+    color: var(--white); font-size: 0.82rem; font-weight: 400;
+    padding: 10px 0; text-align: center; letter-spacing: 0.03em;
+  }
+
+  /* ═══ HEADER ═══ */
+  .header { background: var(--white); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .header .container { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; padding-bottom: 14px; gap: 32px; }
+  .logo-link { flex-shrink: 0; }
+  .logo-link img { height: 56px; width: auto; }
+  .nav { display: flex; align-items: center; gap: 0; }
+  .nav > a, .nav-item > a { font-size: 0.88rem; font-weight: 500; padding: 8px 16px; transition: color 0.2s; color: var(--red); display: block; }
+  .nav > a:hover, .nav-item > a:hover { color: var(--red-dark); }
+  .nav a.nav-cta { background: var(--red); color: var(--white); font-weight: 700; border-radius: 4px; padding: 10px 22px; margin-left: 8px; }
+  .nav a.nav-cta:hover { background: var(--red-dark); color: var(--white); }
+  .nav-item { position: relative; }
+  .nav-item > a { display: flex; align-items: center; gap: 4px; }
+  .nav-item > a::after { content: '▾'; font-size: 0.65rem; opacity: 0.6; }
+  .dropdown { position: absolute; top: 100%; left: 0; min-width: 220px; background: var(--white); border-radius: 6px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.25s var(--ease); z-index: 200; padding: 8px 0; }
+  .nav-item:hover > .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+  .dropdown a { display: block; padding: 10px 20px; font-size: 0.85rem; color: var(--text-dark); font-weight: 400; transition: all 0.2s; }
+  .dropdown a:hover { background: var(--light-gray); color: var(--red); }
+  .dropdown-item { position: relative; }
+  .dropdown-item > a { display: flex; justify-content: space-between; align-items: center; }
+  .dropdown-item > a::after { content: '›'; font-size: 1rem; opacity: 0.5; }
+  .submenu { position: absolute; top: 0; left: 100%; min-width: 200px; background: var(--white); border-radius: 6px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); opacity: 0; visibility: hidden; transform: translateX(10px); transition: all 0.25s var(--ease); z-index: 201; padding: 8px 0; }
+  .dropdown-item:hover > .submenu { opacity: 1; visibility: visible; transform: translateX(0); }
+  .submenu a::after { display: none; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 200; }
+  .hamburger span { width: 24px; height: 2px; background: var(--text-dark); border-radius: 2px; }
+
+  /* ═══ BREADCRUMB ═══ */
+  .breadcrumb { background: var(--off-white); padding: 14px 0; font-size: 0.82rem; color: var(--text-muted); border-bottom: 1px solid var(--warm-gray); }
+  .breadcrumb a { color: var(--text-muted); transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--red); }
+  .breadcrumb .sep { margin: 0 8px; opacity: 0.5; }
+  .breadcrumb .current { color: var(--text-dark); font-weight: 500; }
+
+  /* ═══ HERO ═══ */
+  .hero { position: relative; min-height: 540px; display: flex; align-items: center; overflow: hidden; background: var(--charcoal); }
+  .hero-bg { position: absolute; inset: 0; }
+  .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+  .hero::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(135deg, rgba(30,30,30,0.88) 0%, rgba(30,30,30,0.65) 50%, rgba(30,30,30,0.45) 100%); }
+  .hero .container { position: relative; z-index: 2; padding-top: 72px; padding-bottom: 72px; }
+  .hero-content { max-width: 660px; }
+  .hero-badge { display: inline-block; background: rgba(197,153,58,0.2); border: 1px solid rgba(197,153,58,0.4); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 16px; border-radius: 4px; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(2rem, 3.8vw, 2.9rem); font-weight: 900; line-height: 1.15; color: var(--white); margin-bottom: 16px; }
+  .hero h1 .accent { color: var(--gold-light); }
+  .hero-desc { font-size: 1.02rem; color: rgba(255,255,255,0.78); line-height: 1.7; margin-bottom: 28px; max-width: 540px; font-weight: 300; }
+  .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero-trust { margin-top: 28px; display: flex; gap: 24px; font-size: 0.8rem; color: rgba(255,255,255,0.55); flex-wrap: wrap; }
+  .hero-trust strong { color: rgba(255,255,255,0.9); }
+
+  /* ═══ CTA BANNERS ═══ */
+  .cta-banner { padding: 44px 0; position: relative; overflow: hidden; }
+  .cta-banner .container { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .cta-banner-text h3 { font-size: 1.5rem; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+  .cta-banner-text p { font-size: 0.92rem; line-height: 1.6; max-width: 520px; }
+  .cta-banner-actions { display: flex; gap: 12px; flex-wrap: wrap; flex-shrink: 0; }
+  .cta-financing { background: linear-gradient(135deg, var(--gold) 0%, #B8882E 100%); color: var(--white); }
+  .cta-financing::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.08); }
+  .cta-financing .cta-banner-text p { color: rgba(255,255,255,0.85); }
+  .cta-quote { background: var(--red); color: var(--white); }
+  .cta-quote::before { content: ''; position: absolute; top: -80px; right: 10%; width: 180px; height: 180px; border-radius: 50%; background: rgba(255,255,255,0.06); }
+  .cta-quote .cta-banner-text p { color: rgba(255,255,255,0.8); }
+  .cta-call { background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%); color: var(--white); }
+  .cta-call::before { content: ''; position: absolute; bottom: -60px; left: -40px; width: 160px; height: 160px; border-radius: 50%; background: rgba(255,255,255,0.06); }
+  .cta-call .cta-banner-text p { color: rgba(255,255,255,0.8); }
+  .cta-call .phone-number { font-size: 1.8rem; font-weight: 900; color: var(--white); margin-top: 10px; }
+
+  /* ═══ SECTION HEADER ═══ */
+  .section-header { margin-bottom: 44px; }
+  .section-header .overline { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+  .section-header h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); font-weight: 700; line-height: 1.2; }
+  .section-header p { margin-top: 10px; color: var(--text-body); max-width: 620px; font-size: 0.95rem; }
+
+  /* ═══ INTRO ═══ */
+  .intro-section { padding: 80px 0; background: var(--white); }
+  .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .intro-image { position: relative; }
+  .intro-image img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow-lg); }
+  .intro-image::before { content: ''; position: absolute; top: -20px; left: -20px; width: 100%; height: 100%; border: 3px solid var(--gold); border-radius: var(--radius); z-index: -1; }
+  .intro-text .overline { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+  .intro-text h2 { font-size: clamp(1.7rem, 2.8vw, 2.3rem); font-weight: 700; line-height: 1.2; margin-bottom: 18px; }
+  .intro-text p { color: var(--text-body); font-size: 0.96rem; margin-bottom: 16px; line-height: 1.75; }
+  .intro-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px; padding-top: 28px; border-top: 1px solid var(--warm-gray); }
+  .intro-stat-num { font-size: 1.9rem; font-weight: 900; color: var(--red); line-height: 1; }
+  .intro-stat-label { font-size: 0.82rem; color: var(--text-muted); margin-top: 6px; }
+
+  /* ═══ BENEFITS FEATURES ═══ */
+  .features-section { padding: 80px 0; background: var(--light-gray); }
+  .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .feature-card { background: var(--white); padding: 32px 28px; border-radius: var(--radius); border: 1px solid var(--warm-gray); transition: all 0.3s var(--ease); }
+  .feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
+  .feature-icon { width: 56px; height: 56px; border-radius: 12px; background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%); display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.4rem; margin-bottom: 20px; }
+  .feature-card h4 { font-size: 1.08rem; font-weight: 700; margin-bottom: 8px; }
+  .feature-card p { font-size: 0.9rem; color: var(--text-body); line-height: 1.65; }
+
+  /* ═══ COMPARISON ═══ */
+  .compare-section { padding: 80px 0; background: var(--white); }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .compare-card { padding: 36px 32px; border-radius: var(--radius); border: 1px solid var(--warm-gray); position: relative; transition: all 0.3s var(--ease); }
+  .compare-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .compare-card.refacing { background: linear-gradient(180deg, var(--off-white) 0%, var(--white) 100%); border-top: 4px solid var(--gold); }
+  .compare-card.refacing .badge-best { position: absolute; top: -12px; right: 20px; background: var(--gold); color: var(--white); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; border-radius: 4px; }
+  .compare-card.replacement { background: linear-gradient(180deg, #F4F1EC 0%, var(--white) 100%); border-top: 4px solid var(--text-muted); }
+  .compare-card h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 6px; }
+  .compare-card .compare-tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 18px; }
+  .compare-metric { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--warm-gray); font-size: 0.92rem; }
+  .compare-metric:last-child { border-bottom: none; }
+  .compare-metric span:first-child { color: var(--text-muted); font-weight: 500; }
+  .compare-metric span:last-child { color: var(--text-dark); font-weight: 700; text-align: right; }
+  .compare-card.refacing .compare-metric span:last-child { color: var(--red); }
+
+  /* ═══ DOOR STYLES ═══ */
+  .styles-section { padding: 80px 0; background: var(--off-white); }
+  .styles-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .style-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); transition: all 0.3s var(--ease); cursor: pointer; }
+  .style-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .style-door { aspect-ratio: 4/5; padding: 18px; position: relative; }
+  .style-shaker { background: linear-gradient(135deg, #F8F4EC 0%, #EAE2D2 100%); }
+  .style-shaker::before { content: ''; position: absolute; inset: 18px; border: 6px solid #D4C9B0; border-radius: 4px; }
+  .style-shaker::after { content: ''; position: absolute; top: 36px; left: 36px; right: 36px; bottom: 36px; background: #F0E9D8; border-radius: 2px; }
+  .style-raised { background: linear-gradient(135deg, #E8DAC2 0%, #C9B690 100%); }
+  .style-raised::before { content: ''; position: absolute; inset: 22px; border-radius: 4px; background: linear-gradient(135deg, #F4E8D0 0%, #D9C49E 100%); box-shadow: inset 0 0 0 4px rgba(0,0,0,0.06); }
+  .style-flat { background: linear-gradient(135deg, #2C2A28 0%, #4A463F 100%); }
+  .style-flat::before { content: ''; position: absolute; top: 50%; right: 24px; width: 4px; height: 28px; background: rgba(255,255,255,0.4); border-radius: 2px; transform: translateY(-50%); }
+  .style-beadboard { background: linear-gradient(135deg, #FAFAF6 0%, #E8E4D8 100%); }
+  .style-beadboard::before { content: ''; position: absolute; inset: 18px; background: repeating-linear-gradient(90deg, #E2D9C2 0px, #E2D9C2 1px, #F4EEDC 1px, #F4EEDC 14px); border-radius: 4px; }
+  .style-glass { background: linear-gradient(135deg, #E5E0D0 0%, #C4BCA4 100%); }
+  .style-glass::before { content: ''; position: absolute; inset: 22px; background: linear-gradient(135deg, rgba(255,255,255,0.55), rgba(255,255,255,0.15)); border: 3px solid #B8A878; border-radius: 4px; }
+  .style-glass::after { content: ''; position: absolute; inset: 22px; background: linear-gradient(135deg, transparent 30%, rgba(255,255,255,0.6) 32%, transparent 38%, transparent 58%, rgba(255,255,255,0.4) 60%, transparent 66%); }
+  .style-modern { background: linear-gradient(135deg, #F5F2EC 0%, #DFD7C5 100%); }
+  .style-modern::before { content: ''; position: absolute; top: 18px; left: 18px; right: 18px; height: 40%; background: #C9BFA5; border-radius: 4px 4px 0 0; }
+  .style-modern::after { content: ''; position: absolute; bottom: 18px; left: 18px; right: 18px; height: 50%; background: #B5A88B; border-radius: 0 0 4px 4px; }
+  .style-rustic { background: linear-gradient(135deg, #6D5740 0%, #4A3A2A 100%); }
+  .style-rustic::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(180deg, rgba(0,0,0,0.06) 0px, rgba(0,0,0,0.06) 2px, transparent 2px, transparent 18px); }
+  .style-rustic::after { content: ''; position: absolute; inset: 18px; border: 5px solid rgba(255,255,255,0.1); border-radius: 4px; }
+  .style-inset { background: linear-gradient(135deg, #FAF6EC 0%, #E2D6B8 100%); }
+  .style-inset::before { content: ''; position: absolute; inset: 16px; background: linear-gradient(135deg, #EFE4C8, #DDC9A0); border-radius: 6px; box-shadow: inset 0 2px 6px rgba(0,0,0,0.08); }
+  .style-name { padding: 14px 18px; border-top: 1px solid var(--warm-gray); }
+  .style-name h4 { font-size: 0.92rem; font-weight: 700; margin-bottom: 2px; }
+  .style-name span { font-size: 0.78rem; color: var(--text-muted); }
+
+  /* ═══ ADD-ONS CALLOUT ═══ */
+  .addons-section { padding: 80px 0; background: var(--white); }
+  .addons-card { background: linear-gradient(135deg, var(--charcoal) 0%, var(--dark-bg) 100%); border-radius: var(--radius); padding: 56px; color: var(--white); position: relative; overflow: hidden; }
+  .addons-card::before { content: ''; position: absolute; top: -100px; right: -100px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(197,153,58,0.15), transparent 70%); }
+  .addons-card::after { content: ''; position: absolute; bottom: -80px; left: -80px; width: 240px; height: 240px; border-radius: 50%; background: radial-gradient(circle, rgba(192,57,43,0.12), transparent 70%); }
+  .addons-header { position: relative; z-index: 2; max-width: 700px; margin: 0 auto 36px; text-align: center; }
+  .addons-header .overline { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 12px; }
+  .addons-header h3 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); font-weight: 700; line-height: 1.2; margin-bottom: 14px; }
+  .addons-header p { color: rgba(255,255,255,0.75); font-size: 0.96rem; line-height: 1.7; }
+  .addons-grid { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .addon-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 24px 20px; text-align: center; transition: all 0.3s var(--ease); }
+  .addon-item:hover { background: rgba(255,255,255,0.1); border-color: rgba(197,153,58,0.4); transform: translateY(-3px); }
+  .addon-icon { font-size: 1.6rem; margin-bottom: 10px; }
+  .addon-item h4 { font-size: 0.92rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+  .addon-item p { font-size: 0.8rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
+
+  /* ═══ BEFORE/AFTER ═══ */
+  .ba-section { padding: 80px 0; background: var(--light-gray); }
+  .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .ba-card { border-radius: var(--radius); overflow: hidden; position: relative; box-shadow: var(--shadow-md); }
+  .ba-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; transition: transform 0.5s var(--ease); }
+  .ba-card:hover img { transform: scale(1.03); }
+  .ba-label { position: absolute; top: 14px; left: 14px; background: var(--dark-bg); color: var(--white); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 14px; border-radius: 4px; }
+  .ba-label-after { background: var(--gold); }
+
+  /* ═══ PROCESS ═══ */
+  .process-section { padding: 80px 0; background: var(--white); }
+  .process-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 44px; }
+  .process-step { text-align: center; padding: 24px 12px; position: relative; }
+  .step-num { width: 46px; height: 46px; border-radius: 50%; background: var(--red); color: var(--white); font-size: 1.1rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+  .process-step h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
+  .process-step p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+  .step-connector { position: absolute; top: 46px; right: -12px; width: 24px; height: 2px; background: var(--warm-gray); }
+  .process-step:last-child .step-connector { display: none; }
+
+  /* ═══ FAQ ═══ */
+  .faq-section { padding: 80px 0; background: var(--light-gray); }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .faq-item { background: var(--white); border: 1px solid var(--warm-gray); border-radius: var(--radius); overflow: hidden; transition: border-color 0.3s; }
+  .faq-item:hover { border-color: var(--red); }
+  .faq-q { padding: 18px 22px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 700; font-size: 0.9rem; gap: 12px; }
+  .faq-q::after { content: '+'; font-size: 1.3rem; color: var(--red); flex-shrink: 0; font-weight: 400; }
+  .faq-item.open .faq-q::after { content: '−'; }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease), padding 0.3s; font-size: 0.88rem; color: var(--text-body); line-height: 1.7; padding: 0 22px; }
+  .faq-item.open .faq-a { max-height: 500px; padding: 0 22px 18px; }
+
+  /* ═══ FOOTER ═══ */
+  .footer { background: var(--dark-footer); color: rgba(255,255,255,0.7); padding: 56px 0 0; }
+  .footer-main { display: grid; grid-template-columns: 1.4fr 1.2fr 0.8fr 1fr; gap: 40px; padding-bottom: 40px; }
+  .footer-brand img { height: auto; width: 240px; margin-bottom: 20px; }
+  .footer-brand p { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.6); margin-bottom: 18px; }
+  .footer-social { display: flex; gap: 10px; align-items: center; }
+  .footer-social span { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-right: 4px; }
+  .footer-social a { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.7); transition: all 0.3s; }
+  .footer-social a:hover { background: var(--red); color: var(--white); }
+  .footer h4 { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 18px; }
+  .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px; font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
+  .footer-contact-item .icon { flex-shrink: 0; margin-top: 2px; font-size: 0.9rem; }
+  .footer-contact-item a { color: rgba(255,255,255,0.65); transition: color 0.2s; }
+  .footer-contact-item a:hover { color: var(--white); }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { font-size: 0.88rem; color: rgba(255,255,255,0.65); transition: color 0.2s; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-badges { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 18px 0; text-align: center; font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+  .footer-bottom a { color: var(--gold-light); }
+  .footer-bottom a:hover { color: var(--gold-pale); }
+
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-up { animation: fadeInUp 0.7s var(--ease) forwards; opacity: 0; }
+  .d1 { animation-delay: 0.1s; } .d2 { animation-delay: 0.2s; } .d3 { animation-delay: 0.3s; } .d4 { animation-delay: 0.4s; }
+
+  @media (max-width: 1024px) {
+    .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+    .intro-image { max-width: 500px; margin: 0 auto; }
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .styles-grid { grid-template-columns: repeat(2, 1fr); }
+    .addons-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-steps { grid-template-columns: repeat(3, 1fr); }
+    .step-connector { display: none !important; }
+    .faq-grid { grid-template-columns: 1fr; }
+    .footer-main { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    .nav { display: none; }
+    .hamburger { display: flex; }
+    .nav.open { display: flex; flex-direction: column; position: fixed; inset: 0; background: var(--white); z-index: 150; justify-content: flex-start; align-items: stretch; gap: 0; padding: 80px 20px 20px; overflow-y: auto; }
+    .nav.open > a, .nav.open .nav-item > a { font-size: 1rem; padding: 14px 20px; border-bottom: 1px solid var(--warm-gray); }
+    .nav.open .nav-item { position: static; }
+    .nav.open .dropdown { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; padding: 0; background: var(--light-gray); display: none; }
+    .nav.open .nav-item.open .dropdown { display: block; }
+    .nav.open .dropdown a { padding: 12px 20px 12px 36px; }
+    .nav.open .submenu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; background: var(--warm-gray); display: none; }
+    .nav.open .dropdown-item.open .submenu { display: block; }
+    .nav.open .submenu a { padding-left: 52px; }
+    .nav.open a.nav-cta { margin: 20px; text-align: center; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: 1fr; }
+    .ba-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; }
+    .cta-banner .container { flex-direction: column; text-align: center; }
+    .cta-banner-actions { justify-content: center; }
+    .footer-main { grid-template-columns: 1fr; }
+    .footer-badges { flex-direction: row; }
+    .intro-stats { grid-template-columns: 1fr; }
+    .addons-card { padding: 40px 24px; }
+  }
+  @media (max-width: 480px) {
+    .process-steps { grid-template-columns: 1fr; }
+    .styles-grid { grid-template-columns: 1fr; }
+    .addons-grid { grid-template-columns: 1fr; }
+    .hero-buttons { flex-direction: column; }
+    .hero-buttons .btn { width: 100%; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">Est. 1999 · BBB Accredited · 34+ Google Reviews</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <a href="https://abfremodeling.com" class="logo-link">
+      <img src="https://abfremodeling.com/wp-content/uploads/2026/03/New-Abf-Logo-1.webp" alt="ABF Remodeling">
+    </a>
+    <nav class="nav" id="mainNav">
+      <a href="https://abfremodeling.com/">Home</a>
+      <a href="https://abfremodeling.com/about">About</a>
+      <div class="nav-item">
+        <a href="#">Our Services</a>
+        <div class="dropdown">
+          <div class="dropdown-item">
+            <a href="index.html">Kitchen Remodeling</a>
+            <div class="submenu">
+              <a href="index.html">Kitchen Remodeling</a>
+              <a href="granite-countertops.html">Granite Countertops</a>
+              <a href="cabinet-refacing.html">Custom Cabinet &amp; Cabinet Refacing</a>
+              <a href="tile-flooring.html">Tile &amp; Backsplash</a>
+            </div>
+          </div>
+          <div class="dropdown-item">
+            <a href="bathroom.html">Bathroom Remodeling</a>
+            <div class="submenu">
+              <a href="bathroom.html">Bathroom Remodeling</a>
+              <a href="bathroom-tile-flooring.html">Bathroom Tile Flooring</a>
+              <a href="bathroom-countertops.html">Bathroom Countertops</a>
+            </div>
+          </div>
+          <div class="dropdown-item">
+            <a href="https://abfremodeling.com/home-remodeling/">Home Renovation &amp; Additions</a>
+            <div class="submenu">
+              <a href="https://abfremodeling.com/home-remodeling/">Home Remodeling</a>
+              <a href="https://abfremodeling.com/room-additions/">Room Additions</a>
+              <a href="https://abfremodeling.com/attic-conversions/">Attic Conversions</a>
+              <a href="https://abfremodeling.com/new-construction/">New Construction</a>
+            </div>
+          </div>
+          <div class="dropdown-item">
+            <a href="https://abfremodeling.com/flooring/">Flooring</a>
+            <div class="submenu">
+              <a href="https://abfremodeling.com/tile-flooring/">Tile Flooring</a>
+              <a href="https://abfremodeling.com/flooring/">Other Flooring Types</a>
+            </div>
+          </div>
+          <div class="dropdown-item">
+            <a href="https://abfremodeling.com/outdoor-living-areas/">Outdoor Living</a>
+            <div class="submenu">
+              <a href="https://abfremodeling.com/patio-enclosures/">Patio Covers</a>
+              <a href="https://abfremodeling.com/outdoor-living-areas/">Outdoor Living Areas</a>
+            </div>
+          </div>
+          <div class="dropdown-item">
+            <a href="#">Painting</a>
+            <div class="submenu">
+              <a href="https://abfremodeling.com/interior/">Interior Painting</a>
+              <a href="https://abfremodeling.com/exterior/">Exterior Painting</a>
+            </div>
+          </div>
+          <a href="https://abfremodeling.com/roofing-services/">Roofing Services</a>
+          <a href="https://abfremodeling.com/design-build-services/">Design-Build Services</a>
+          <a href="https://abfremodeling.com/remediation/">Remediation Services</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#">Project Portfolio</a>
+        <div class="dropdown">
+          <a href="https://abfremodeling.com/kitchen-and-bath-gallery">Kitchen &amp; Bath Gallery</a>
+          <a href="https://abfremodeling.com/room-additions-gallery">Room Additions</a>
+          <a href="https://abfremodeling.com/flooring-gallery">Flooring</a>
+          <a href="https://abfremodeling.com/outdoor-living-gallery">Outdoor Living</a>
+          <a href="https://abfremodeling.com/painting-gallery">Painting</a>
+        </div>
+      </div>
+      <a href="https://abfremodeling.com/financing">Finance</a>
+      <a href="https://abfremodeling.com/blog">Blog</a>
+      <a href="https://abfremodeling.com/testimonials">Testimonials</a>
+      <a href="https://abfremodeling.com/contact-us" class="nav-cta">Contact Us</a>
+    </nav>
+    <div class="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="https://abfremodeling.com">Home</a>
+    <span class="sep">›</span>
+    <a href="index.html">Kitchen Remodeling</a>
+    <span class="sep">›</span>
+    <span class="current">Custom Cabinets &amp; Refacing</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img src="https://abfremodeling.com/wp-content/uploads/2022/07/Cabinet-Refinishing-Houston-1.jpg" alt="Cabinet Refacing in Houston Kitchen"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge fade-up">Custom Cabinets &amp; Refacing</div>
+      <h1 class="fade-up d1">Update Your Kitchen Cabinets <span class="accent">Without Disrupting Your Life</span></h1>
+      <p class="hero-desc fade-up d2">A brand-new kitchen in as little as 2–4 days. No demolition. No displaced family. Cabinet refacing transforms your space at a fraction of the cost of full replacement — and you keep using your kitchen the whole time.</p>
+      <div class="hero-buttons fade-up d3">
+        <a href="https://abfremodeling.com/contact-us/" class="btn btn-red btn-lg">Get a Free Estimate</a>
+        <a href="tel:281-855-3400" class="btn btn-outline-white btn-lg">Call 281-855-3400</a>
+      </div>
+      <div class="hero-trust fade-up d4">
+        <span><strong>2–4 days</strong> Average Project</span>
+        <span><strong>30+</strong> Years Experience</span>
+        <span><strong>Fraction</strong> of Replacement Cost</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA #1: FINANCING -->
+<div class="cta-banner cta-financing">
+  <div class="container">
+    <div class="cta-banner-text">
+      <h3>Finance Your Cabinet Project</h3>
+      <p>Refacing is already a fraction of the cost of replacement — and flexible financing makes upgrading even easier. Apply in minutes.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a href="https://abfremodeling.com/financing/" class="btn btn-white btn-lg">Apply Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro-section">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-image">
+        <img src="https://abfremodeling.com/wp-content/uploads/2022/07/Cabinet-Refinishing-Houston-1.jpg" alt="Kitchen Cabinet Refacing">
+      </div>
+      <div class="intro-text">
+        <div class="overline">What Is Cabinet Refacing?</div>
+        <h2>A New Kitchen Look — Without the New Kitchen Price Tag</h2>
+        <p>Cabinet refacing replaces your doors, drawer fronts, and matching veneer while keeping the existing cabinet structures in place. Subtle or dramatic, rustic or modern — the look is entirely up to you.</p>
+        <p>Door and drawer fronts wear out faster than the frames behind them. Refacing gives you the option of changing your look without cleaning out your kitchen — or your wallet. The familiar layout stays. Everything else gets a complete refresh.</p>
+        <div class="intro-stats">
+          <div>
+            <div class="intro-stat-num">2–4</div>
+            <div class="intro-stat-label">Day Typical Project</div>
+          </div>
+          <div>
+            <div class="intro-stat-num">30+</div>
+            <div class="intro-stat-label">Years Designing Kitchens</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS FEATURES -->
+<section class="features-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-left:auto; margin-right:auto;">
+      <div class="overline">Why Refacing</div>
+      <h2>The Smart Way to Refresh Your Kitchen</h2>
+      <p style="margin-left:auto; margin-right:auto;">Refacing gets you a kitchen you love — fast, affordable, and without taking your kitchen out of service.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h4>Fast Turnaround</h4>
+        <p>Most refacing projects complete in just 2–4 days. Compare that to weeks of disruption for a full replacement.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h4>Fraction of the Cost</h4>
+        <p>You pay only for the visible surfaces and new hardware — not new boxes. Significant savings versus full cabinetry replacement.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏠</div>
+        <h4>No Displacement</h4>
+        <p>Stay in your home. You'll keep cooking access and plumbing the whole time — no displaced family or temporary kitchen needed.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌱</div>
+        <h4>Eco-Friendly</h4>
+        <p>By reusing the existing cabinet boxes, you keep materials out of the landfill and reduce the energy needed to build new ones.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h4>Endless Style Options</h4>
+        <p>From shaker to modern slab to glass-front — wide selection of wood species, finishes, and door profiles to choose from.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧹</div>
+        <h4>Clean Workspace</h4>
+        <p>Our technicians clean the kitchen area at the end of every workday. Minimal mess, maximum respect for your home.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON: Refacing vs Replacement -->
+<section class="compare-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-left:auto; margin-right:auto;">
+      <div class="overline">Refacing vs Replacement</div>
+      <h2>Which Approach Makes Sense for You?</h2>
+      <p style="margin-left:auto; margin-right:auto;">If your cabinet boxes are structurally sound, refacing is almost always the smarter choice. Here's how the two stack up.</p>
+    </div>
+    <div class="compare-grid">
+      <div class="compare-card refacing">
+        <span class="badge-best">Best Value</span>
+        <div class="compare-tag">Cabinet Refacing</div>
+        <h3>Reface &amp; Renew</h3>
+        <div class="compare-metric"><span>Typical Timeline</span><span>2–4 days</span></div>
+        <div class="compare-metric"><span>Relative Cost</span><span>30–50% of new</span></div>
+        <div class="compare-metric"><span>Demolition</span><span>None</span></div>
+        <div class="compare-metric"><span>Kitchen Access</span><span>Most of the day</span></div>
+        <div class="compare-metric"><span>Plumbing Service</span><span>Uninterrupted</span></div>
+        <div class="compare-metric"><span>Landfill Waste</span><span>Minimal</span></div>
+        <div class="compare-metric"><span>Layout Changes</span><span>Add-ons available</span></div>
+      </div>
+      <div class="compare-card replacement">
+        <div class="compare-tag">Full Replacement</div>
+        <h3>Tear-Out &amp; Replace</h3>
+        <div class="compare-metric"><span>Typical Timeline</span><span>3–8 weeks</span></div>
+        <div class="compare-metric"><span>Relative Cost</span><span>100% baseline</span></div>
+        <div class="compare-metric"><span>Demolition</span><span>Full demo required</span></div>
+        <div class="compare-metric"><span>Kitchen Access</span><span>Out of service</span></div>
+        <div class="compare-metric"><span>Plumbing Service</span><span>Disconnected</span></div>
+        <div class="compare-metric"><span>Landfill Waste</span><span>Significant</span></div>
+        <div class="compare-metric"><span>Layout Changes</span><span>Full flexibility</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOOR STYLES SHOWCASE -->
+<section class="styles-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-left:auto; margin-right:auto;">
+      <div class="overline">Door Styles</div>
+      <h2>Pick the Look That Fits Your Kitchen</h2>
+      <p style="margin-left:auto; margin-right:auto;">Wide selection of door profiles, wood species, and finishes — preview popular styles below or visit our showroom to see real samples.</p>
+    </div>
+    <div class="styles-grid">
+      <div class="style-card">
+        <div class="style-door style-shaker"></div>
+        <div class="style-name"><h4>Shaker</h4><span>Timeless &amp; versatile</span></div>
+      </div>
+      <div class="style-card">
+        <div class="style-door style-raised"></div>
+        <div class="style-name"><h4>Raised Panel</h4><span>Traditional elegance</span></div>
+      </div>
+      <div class="style-card">
+        <div class="style-door style-flat"></div>
+        <div class="style-name"><h4>Flat Slab</h4><span>Modern &amp; minimal</span></div>
+      </div>
+      <div class="style-card">
+        <div class="style-door style-beadboard"></div>
+        <div class="style-name"><h4>Beadboard</h4><span>Cottage &amp; coastal</span></div>
+      </div>
+      <div class="style-card">
+        <div class="style-door style-glass"></div>
+        <div class="style-name"><h4>Glass Front</h4><span>Display &amp; airy</span></div>
+      </div>
+      <div class="style-card">
+        <div class="style-door style-modern"></div>
+        <div class="style-name"><h4>Two-Tone Modern</h4><span>Contemporary contrast</span></div>
+      </div>
+      <div class="style-card">
+        <div class="style-door style-rustic"></div>
+        <div class="style-name"><h4>Rustic Wood</h4><span>Warm &amp; natural</span></div>
+      </div>
+      <div class="style-card">
+        <div class="style-door style-inset"></div>
+        <div class="style-name"><h4>Inset</h4><span>Custom &amp; classic</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADD-ONS CALLOUT -->
+<section class="addons-section">
+  <div class="container">
+    <div class="addons-card">
+      <div class="addons-header">
+        <div class="overline">Make the Most of It</div>
+        <h3>Already Refacing? Add Storage While You're at It.</h3>
+        <p>The best time to make use of wasted space is when your cabinets are being refaced. We can install additional cabinets, add drawers, build islands, and modify existing storage — all matched perfectly to your new look.</p>
+      </div>
+      <div class="addons-grid">
+        <div class="addon-item">
+          <div class="addon-icon">🗄️</div>
+          <h4>Additional Cabinets</h4>
+          <p>Fill gaps and add storage where you need it most.</p>
+        </div>
+        <div class="addon-item">
+          <div class="addon-icon">📐</div>
+          <h4>Custom Islands</h4>
+          <p>New islands designed to match your refaced cabinetry.</p>
+        </div>
+        <div class="addon-item">
+          <div class="addon-icon">🔧</div>
+          <h4>Drawer Upgrades</h4>
+          <p>Add drawers, soft-close hardware, and pull-out organizers.</p>
+        </div>
+        <div class="addon-item">
+          <div class="addon-icon">✨</div>
+          <h4>Cabinet Modifications</h4>
+          <p>Reconfigure existing cabinets to better fit your needs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE/AFTER -->
+<section class="ba-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-left:auto; margin-right:auto;">
+      <div class="overline">Our Work</div>
+      <h2>Real Cabinet Transformations</h2>
+      <p style="margin-left:auto; margin-right:auto;">A recent Houston kitchen — dated, builder-grade cabinets transformed in days.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-card"><span class="ba-label">Before</span><img src="https://abfremodeling.com/wp-content/uploads/2026/03/IMG_75231-1024x768.jpg" alt="Kitchen Cabinets Before"></div>
+      <div class="ba-card"><span class="ba-label ba-label-after">After</span><img src="https://abfremodeling.com/wp-content/uploads/2026/03/IMG_77341-1024x768.jpg" alt="Kitchen Cabinets After"></div>
+    </div>
+    <div style="text-align:center; margin-top:32px;">
+      <a href="https://abfremodeling.com/kitchen-and-bath-gallery" class="btn btn-outline-dark">View Full Project Portfolio →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA #2: FREE QUOTE -->
+<div class="cta-banner cta-quote">
+  <div class="container">
+    <div class="cta-banner-text">
+      <h3>Get a Free Cabinet Refacing Quote</h3>
+      <p>Tell us about your kitchen and we'll schedule a consultation, show you door samples, and deliver a detailed, transparent estimate — no obligation.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a href="https://abfremodeling.com/contact-us/" class="btn btn-white btn-lg">Get Free Quote</a>
+      <a href="https://abfremodeling.com/financing/" class="btn btn-outline-white btn-lg">Get Pre-Approved</a>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-left:auto; margin-right:auto;">
+      <div class="overline">How It Works</div>
+      <h2>Our Cabinet Refacing Process</h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h4>Consultation</h4>
+        <p>We assess your cabinets and discuss your style.</p>
+        <div class="step-connector"></div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h4>Style Selection</h4>
+        <p>Choose doors, drawer fronts, hardware, and finish.</p>
+        <div class="step-connector"></div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h4>Measure &amp; Order</h4>
+        <p>Precise measurements taken; custom pieces ordered.</p>
+        <div class="step-connector"></div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <h4>Installation</h4>
+        <p>2–4 days of clean, in-place installation.</p>
+        <div class="step-connector"></div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">5</div>
+        <h4>Final Walkthrough</h4>
+        <p>We make sure every detail meets your expectations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-left:auto; margin-right:auto; margin-bottom:36px;">
+      <div class="overline">FAQs</div>
+      <h2>Cabinet Refacing Questions, Answered</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Is cabinet refacing right for me?</div>
+        <div class="faq-a">If your cabinet boxes are structurally solid but the doors and drawer fronts look dated, refacing is almost always the smarter call. Door and drawer fronts wear faster than frames — so it's rarely necessary to replace the whole structure. Refacing gives you the new look without the new-kitchen cost.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Is cabinet refacing expensive?</div>
+        <div class="faq-a">Cabinet refacing typically costs a fraction of a full replacement. With over 30 years in the industry, we get volume pricing from our manufacturers and pass those savings on to you — so you get quality cabinet doors and refacing at affordable pricing.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">How long does refacing take?</div>
+        <div class="faq-a">Most kitchen cabinet refacing projects complete in just 2–4 days. Our technicians work cleanly, leave the kitchen tidy at the end of each day, and your plumbing and most of your cooking area stay in service throughout.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Will there be a big mess?</div>
+        <div class="faq-a">No. Our technicians pride themselves on keeping a clean workplace and clean the kitchen area at the end of every workday. There's far less dust and demo than a full cabinet replacement — and you'll have full use of your home throughout.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Are there limited cabinet choices?</div>
+        <div class="faq-a">Not at all. We offer a great selection of wood species, finishes, door profiles, and colors. With 30 years of design experience, we'll help you find the exact look you're after — whether that's classic shaker, modern slab, or anything in between.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Can I add cabinets if I need more storage?</div>
+        <div class="faq-a">Yes. Refacing is the perfect time to make use of wasted space. We can install additional cabinets, modify existing ones, add drawers, and build islands — all matched to the new look of your refaced kitchen.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Are there environmental benefits?</div>
+        <div class="faq-a">Yes. Refacing keeps your cabinet boxes out of the landfill and conserves the materials and energy that would have gone into building entirely new ones. Your kitchen looks completely new — and the project is eco-friendly.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Do you offer financing?</div>
+        <div class="faq-a">Yes. Flexible financing is available so you don't have to compromise on the door style or wood species you really want. Get pre-approved in minutes through our financing page.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA #3: CALL US -->
+<div class="cta-banner cta-call">
+  <div class="container">
+    <div class="cta-banner-text">
+      <h3>Ready for a New Kitchen Look — in Days?</h3>
+      <p>Serving Houston, River Oaks, Copperfield, Cypress, Memorial, Sugarland, and surrounding areas.</p>
+      <div class="phone-number"><a href="tel:281-855-3400" style="color:var(--white);">281-855-3400</a></div>
+    </div>
+    <div class="cta-banner-actions">
+      <a href="tel:281-855-3400" class="btn btn-white btn-lg">Call Us Now</a>
+      <a href="https://abfremodeling.com/contact-us/" class="btn btn-outline-white btn-lg">Request Quote Online</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="image assets/ABF_logo_transparent.png" alt="ABF Remodeling">
+        <p>A Beautiful Floor, Inc. DBA, ABF Remodeling established in April 1999 located in Houston, Texas is a premier residential and commercial remodeling and flooring company.</p>
+        <div class="footer-social">
+          <span>Follow us:</span>
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="X">X</a>
+          <a href="#" title="Instagram">ig</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item"><span class="icon">📍</span><span>Address<br><a href="https://goo.gl/maps/7HfhP7ds1RCPLx6d6">8719 Hwy 6 N, Houston, TX 77095</a></span></div>
+        <div class="footer-contact-item"><span class="icon">✉️</span><span>Email<br><a href="mailto:info@abfremodeling.com">info@abfremodeling.com</a></span></div>
+        <div class="footer-contact-item"><span class="icon">📞</span><span>Phone<br><a href="tel:281-855-3400">281-855-3400</a></span></div>
+      </div>
+      <div>
+        <h4>Useful link</h4>
+        <ul class="footer-links">
+          <li><a href="https://abfremodeling.com/remodeling">Services</a></li>
+          <li><a href="https://abfremodeling.com/about">About</a></li>
+          <li><a href="https://abfremodeling.com/testimonials">Testimonials</a></li>
+          <li><a href="https://abfremodeling.com/contact-us">Contact Us</a></li>
+          <li><a href="https://abfremodeling.com/kitchen-bath-remodeling">Projects</a></li>
+        </ul>
+      </div>
+      <div class="footer-badges">
+        <img src="image assets/NARI_logo.png" alt="NARI Member" style="height:80px;width:auto;">
+        <img src="image assets/bbb_accredited.png" alt="BBB A+ Accredited Business" style="height:80px;width:auto;">
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      Copyright © 2026 ABF Remodeling | All Rights Reserved | <a href="https://abfremodeling.com/privacy-policy-for-abf-remodeling/">Privacy Policy</a> | Designed by <a href="https://theclaymedia.com">THECLAYMEDIA</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() {
+    document.getElementById('mainNav').classList.toggle('open');
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    const navItems = document.querySelectorAll('.nav-item > a');
+    const dropdownItems = document.querySelectorAll('.dropdown-item > a');
+    navItems.forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) { e.preventDefault(); this.parentElement.classList.toggle('open'); }
+      });
+    });
+    dropdownItems.forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) { e.preventDefault(); this.parentElement.classList.toggle('open'); }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

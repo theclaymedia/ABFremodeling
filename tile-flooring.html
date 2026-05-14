@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tile Flooring & Backsplash Installation in Houston, TX – ABF Remodeling</title>
+<meta name="description" content="Expert tile flooring, backsplash, and shower tile installation in Houston. Ceramic, porcelain, marble, travertine, mosaic, and natural stone — installed by ABF Remodeling.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #C0392B;
+    --red-dark: #A93226;
+    --brown-bar: #A97628;
+    --gold: #C5993A;
+    --gold-light: #D9B15E;
+    --gold-pale: #F0DEB0;
+    --dark-bg: #2B2B2B;
+    --dark-footer: #262626;
+    --charcoal: #1E1E1E;
+    --white: #FFFFFF;
+    --off-white: #F8F6F2;
+    --light-gray: #F5F5F5;
+    --warm-gray: #E8E4DC;
+    --text-dark: #1A1A1A;
+    --text-body: #4A4A4A;
+    --text-muted: #7A7A7A;
+    --font: 'Roboto', sans-serif;
+    --ease: cubic-bezier(0.23, 1, 0.32, 1);
+    --shadow-md: 0 6px 24px rgba(0,0,0,0.08);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+    --radius: 8px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text-dark); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 28px; font-family: var(--font); font-size: 0.88rem; font-weight: 700;
+    letter-spacing: 0.02em; border-radius: 4px; border: none; cursor: pointer;
+    transition: all 0.3s var(--ease); text-transform: uppercase; white-space: nowrap;
+  }
+  .btn-red { background: var(--red); color: var(--white); }
+  .btn-red:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(192,57,43,0.25); }
+  .btn-gold { background: var(--gold); color: var(--white); }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-white { background: var(--white); color: var(--text-dark); }
+  .btn-white:hover { background: var(--off-white); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .btn-outline-white { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.4); }
+  .btn-outline-white:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+  .btn-outline-dark { background: transparent; color: var(--text-dark); border: 2px solid var(--text-dark); }
+  .btn-outline-dark:hover { background: var(--text-dark); color: var(--white); }
+  .btn-lg { padding: 16px 32px; font-size: 0.92rem; }
+
+  .top-bar { background: #eb3506; color: var(--white); font-size: 0.82rem; font-weight: 400; padding: 10px 0; text-align: center; letter-spacing: 0.03em; }
+
+  .header { background: var(--white); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .header .container { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; padding-bottom: 14px; gap: 32px; }
+  .logo-link { flex-shrink: 0; }
+  .logo-link img { height: 56px; width: auto; }
+  .nav { display: flex; align-items: center; gap: 0; }
+  .nav > a, .nav-item > a { font-size: 0.88rem; font-weight: 500; padding: 8px 16px; transition: color 0.2s; color: var(--red); display: block; }
+  .nav > a:hover, .nav-item > a:hover { color: var(--red-dark); }
+  .nav a.nav-cta { background: var(--red); color: var(--white); font-weight: 700; border-radius: 4px; padding: 10px 22px; margin-left: 8px; }
+  .nav a.nav-cta:hover { background: var(--red-dark); color: var(--white); }
+  .nav-item { position: relative; }
+  .nav-item > a { display: flex; align-items: center; gap: 4px; }
+  .nav-item > a::after { content: '▾'; font-size: 0.65rem; opacity: 0.6; }
+  .dropdown { position: absolute; top: 100%; left: 0; min-width: 220px; background: var(--white); border-radius: 6px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.25s var(--ease); z-index: 200; padding: 8px 0; }
+  .nav-item:hover > .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+  .dropdown a { display: block; padding: 10px 20px; font-size: 0.85rem; color: var(--text-dark); font-weight: 400; transition: all 0.2s; }
+  .dropdown a:hover { background: var(--light-gray); color: var(--red); }
+  .dropdown-item { position: relative; }
+  .dropdown-item > a { display: flex; justify-content: space-between; align-items: center; }
+  .dropdown-item > a::after { content: '›'; font-size: 1rem; opacity: 0.5; }
+  .submenu { position: absolute; top: 0; left: 100%; min-width: 200px; background: var(--white); border-radius: 6px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); opacity: 0; visibility: hidden; transform: translateX(10px); transition: all 0.25s var(--ease); z-index: 201; padding: 8px 0; }
+  .dropdown-item:hover > .submenu { opacity: 1; visibility: visible; transform: translateX(0); }
+  .submenu a::after { display: none; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 200; }
+  .hamburger span { width: 24px; height: 2px; background: var(--text-dark); border-radius: 2px; }
+
+  .breadcrumb { background: var(--off-white); padding: 14px 0; font-size: 0.82rem; color: var(--text-muted); border-bottom: 1px solid var(--warm-gray); }
+  .breadcrumb a { color: var(--text-muted); transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--red); }
+  .breadcrumb .sep { margin: 0 8px; opacity: 0.5; }
+  .breadcrumb .current { color: var(--text-dark); font-weight: 500; }
+
+  .hero { position: relative; min-height: 540px; display: flex; align-items: center; overflow: hidden; background: var(--charcoal); }
+  .hero-bg { position: absolute; inset: 0; }
+  .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+  .hero::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(135deg, rgba(30,30,30,0.88) 0%, rgba(30,30,30,0.65) 50%, rgba(30,30,30,0.45) 100%); }
+  .hero .container { position: relative; z-index: 2; padding-top: 72px; padding-bottom: 72px; }
+  .hero-content { max-width: 660px; }
+  .hero-badge { display: inline-block; background: rgba(197,153,58,0.2); border: 1px solid rgba(197,153,58,0.4); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 16px; border-radius: 4px; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(2rem, 3.8vw, 2.9rem); font-weight: 900; line-height: 1.15; color: var(--white); margin-bottom: 16px; }
+  .hero h1 .accent { color: var(--gold-light); }
+  .hero-desc { font-size: 1.02rem; color: rgba(255,255,255,0.78); line-height: 1.7; margin-bottom: 28px; max-width: 540px; font-weight: 300; }
+  .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero-trust { margin-top: 28px; display: flex; gap: 24px; font-size: 0.8rem; color: rgba(255,255,255,0.55); flex-wrap: wrap; }
+  .hero-trust strong { color: rgba(255,255,255,0.9); }
+
+  .cta-banner { padding: 44px 0; position: relative; overflow: hidden; }
+  .cta-banner .container { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .cta-banner-text h3 { font-size: 1.5rem; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+  .cta-banner-text p { font-size: 0.92rem; line-height: 1.6; max-width: 520px; }
+  .cta-banner-actions { display: flex; gap: 12px; flex-wrap: wrap; flex-shrink: 0; }
+  .cta-financing { background: linear-gradient(135deg, var(--gold) 0%, #B8882E 100%); color: var(--white); }
+  .cta-financing::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.08); }
+  .cta-financing .cta-banner-text p { color: rgba(255,255,255,0.85); }
+  .cta-quote { background: var(--red); color: var(--white); }
+  .cta-quote::before { content: ''; position: absolute; top: -80px; right: 10%; width: 180px; height: 180px; border-radius: 50%; background: rgba(255,255,255,0.06); }
+  .cta-quote .cta-banner-text p { color: rgba(255,255,255,0.8); }
+  .cta-call { background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%); color: var(--white); }
+  .cta-call::before { content: ''; position: absolute; bottom: -60px; left: -40px; width: 160px; height: 160px; border-radius: 50%; background: rgba(255,255,255,0.06); }
+  .cta-call .cta-banner-text p { color: rgba(255,255,255,0.8); }
+  .cta-call .phone-number { font-size: 1.8rem; font-weight: 900; color: var(--white); margin-top: 10px; }
+
+  .section-header { margin-bottom: 44px; }
+  .section-header .overline { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+  .section-header h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); font-weight: 700; line-height: 1.2; }
+  .section-header p { margin-top: 10px; color: var(--text-body); max-width: 620px; font-size: 0.95rem; }
+
+  /* INTRO */
+  .intro-section { padding: 80px 0; background: var(--white); }
+  .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .intro-image { position: relative; aspect-ratio: 4/5; border-radius: var(--radius); box-shadow: var(--shadow-lg); overflow: hidden; background: linear-gradient(135deg, var(--off-white), var(--warm-gray)); }
+  .intro-image::before { content: ''; position: absolute; top: -20px; left: -20px; width: 100%; height: 100%; border: 3px solid var(--gold); border-radius: var(--radius); z-index: -1; }
+  /* Decorative tile mosaic pattern */
+  .intro-tile-pattern { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(8, 1fr); gap: 4px; padding: 24px; }
+  .intro-tile-pattern span { border-radius: 3px; }
+  .intro-tile-pattern span:nth-child(odd) { background: linear-gradient(135deg, #D9C8A8, #B8A480); }
+  .intro-tile-pattern span:nth-child(even) { background: linear-gradient(135deg, #F4EEDC, #E2D7BA); }
+  .intro-tile-pattern span:nth-child(5n) { background: linear-gradient(135deg, #6D5740, #4A3A2A); }
+  .intro-tile-pattern span:nth-child(7n) { background: linear-gradient(135deg, var(--gold), var(--gold-light)); }
+  .intro-tile-pattern span:nth-child(11n) { background: linear-gradient(135deg, #2C2826, #4A423E); }
+  .intro-text .overline { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+  .intro-text h2 { font-size: clamp(1.7rem, 2.8vw, 2.3rem); font-weight: 700; line-height: 1.2; margin-bottom: 18px; }
+  .intro-text p { color: var(--text-body); font-size: 0.96rem; margin-bottom: 16px; line-height: 1.75; }
+  .intro-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px; padding-top: 28px; border-top: 1px solid var(--warm-gray); }
+  .intro-stat-num { font-size: 1.9rem; font-weight: 900; color: var(--red); line-height: 1; }
+  .intro-stat-label { font-size: 0.82rem; color: var(--text-muted); margin-top: 6px; }
+
+  /* TILE MATERIALS */
+  .materials-section { padding: 80px 0; background: var(--light-gray); }
+  .materials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .material-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); transition: all 0.3s var(--ease); cursor: pointer; }
+  .material-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .material-swatch { aspect-ratio: 16/9; position: relative; overflow: hidden; }
+  .mat-ceramic { background: linear-gradient(135deg, #F4EEDC 0%, #E2D7BA 100%); }
+  .mat-ceramic::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px); background-size: 33% 50%; }
+  .mat-porcelain { background: linear-gradient(135deg, #FAFAF6 0%, #DDD5C5 100%); }
+  .mat-porcelain::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(150,140,120,0.25) 1px, transparent 1px), linear-gradient(90deg, rgba(150,140,120,0.25) 1px, transparent 1px); background-size: 25% 50%; }
+  .mat-marble { background: linear-gradient(135deg, #EEEAE0 0%, #C9C1AE 100%); position: relative; }
+  .mat-marble::after { content: ''; position: absolute; inset: 0; background: linear-gradient(120deg, transparent 30%, rgba(100,90,75,0.18) 32%, transparent 35%, transparent 55%, rgba(100,90,75,0.12) 58%, transparent 62%, transparent 75%, rgba(100,90,75,0.2) 78%, transparent 82%); }
+  .mat-travertine { background: linear-gradient(135deg, #DCC9A8 0%, #B49972 100%); }
+  .mat-travertine::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 30%, rgba(120,90,60,0.2) 2px, transparent 4px), radial-gradient(circle at 70% 60%, rgba(120,90,60,0.18) 2px, transparent 4px), radial-gradient(circle at 40% 80%, rgba(120,90,60,0.2) 2px, transparent 4px), radial-gradient(circle at 85% 25%, rgba(120,90,60,0.18) 2px, transparent 4px); background-size: 50% 50%; }
+  .mat-granite { background: linear-gradient(135deg, #2C2826 0%, #5A5450 100%); }
+  .mat-granite::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 30% 40%, rgba(220,200,170,0.3) 1px, transparent 2px), radial-gradient(circle at 60% 70%, rgba(220,200,170,0.25) 1px, transparent 2px), radial-gradient(circle at 80% 20%, rgba(220,200,170,0.3) 1px, transparent 2px); background-size: 30% 30%; }
+  .mat-glass { background: linear-gradient(135deg, #B5D4DC 0%, #7AAFB8 100%); position: relative; }
+  .mat-glass::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, transparent 40%, transparent 60%, rgba(255,255,255,0.25) 100%); }
+  .mat-glass::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px); background-size: 25% 50%; }
+  .mat-limestone { background: linear-gradient(135deg, #E5DCC8 0%, #B8AB8E 100%); }
+  .mat-limestone::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(140,120,90,0.3) 1px, transparent 1px); background-size: 100% 50%; }
+  .mat-saltillo { background: linear-gradient(135deg, #C97B4F 0%, #8B4A2A 100%); }
+  .mat-saltillo::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(60,30,15,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(60,30,15,0.4) 1px, transparent 1px); background-size: 33% 100%; }
+  .mat-saltillo::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(80,40,20,0.15) 30%, transparent 60%); }
+  .mat-mosaic { background: var(--white); position: relative; }
+  .mat-mosaic::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(45deg, #6D8B7A 25%, transparent 25%), linear-gradient(-45deg, #C9A88D 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #2C4A52 75%), linear-gradient(-45deg, transparent 75%, #E5DCC8 75%); background-size: 16px 16px; background-position: 0 0, 0 8px, 8px -8px, -8px 0px; }
+  .material-info { padding: 20px 22px; }
+  .material-info h4 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+  .material-info p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+
+  /* APPLICATIONS */
+  .applications-section { padding: 80px 0; background: var(--white); }
+  .apps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .app-card { background: var(--off-white); border: 1px solid var(--warm-gray); border-radius: var(--radius); padding: 28px 24px; display: flex; align-items: flex-start; gap: 18px; transition: all 0.3s var(--ease); }
+  .app-card:hover { background: var(--white); border-color: var(--red); transform: translateY(-3px); box-shadow: var(--shadow-md); }
+  .app-icon { width: 52px; height: 52px; border-radius: 12px; background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+  .app-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+  .app-card p { font-size: 0.85rem; color: var(--text-body); line-height: 1.55; }
+
+  /* SERVICES STRIP */
+  .services-strip { padding: 56px 0; background: var(--off-white); border-top: 1px solid var(--warm-gray); border-bottom: 1px solid var(--warm-gray); }
+  .services-strip-header { text-align: center; margin-bottom: 32px; }
+  .services-strip-header .overline { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+  .services-strip-header h3 { font-size: 1.4rem; font-weight: 700; }
+  .services-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .service-chip { background: var(--white); border: 1px solid var(--warm-gray); padding: 12px 22px; border-radius: 40px; font-size: 0.88rem; font-weight: 500; color: var(--text-dark); display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s var(--ease); }
+  .service-chip:hover { border-color: var(--red); color: var(--red); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .service-chip::before { content: '✓'; color: var(--gold); font-weight: 700; }
+
+  /* WHY US */
+  .why-section { padding: 80px 0; background: var(--light-gray); }
+  .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .why-card { text-align: center; padding: 32px 20px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--warm-gray); transition: all 0.3s var(--ease); }
+  .why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
+  .why-num { font-size: 2.2rem; font-weight: 900; color: var(--red); line-height: 1; margin-bottom: 10px; }
+  .why-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
+  .why-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; }
+
+  /* BEFORE/AFTER */
+  .ba-section { padding: 80px 0; background: var(--white); }
+  .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .ba-card { border-radius: var(--radius); overflow: hidden; position: relative; box-shadow: var(--shadow-md); }
+  .ba-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; transition: transform 0.5s var(--ease); }
+  .ba-card:hover img { transform: scale(1.03); }
+  .ba-label { position: absolute; top: 14px; left: 14px; background: var(--dark-bg); color: var(--white); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 14px; border-radius: 4px; }
+  .ba-label-after { background: var(--gold); }
+
+  /* PROCESS */
+  .process-section { padding: 80px 0; background: var(--light-gray); }
+  .process-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 44px; }
+  .process-step { text-align: center; padding: 24px 12px; position: relative; }
+  .step-num { width: 46px; height: 46px; border-radius: 50%; background: var(--red); color: var(--white); font-size: 1.1rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+  .process-step h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
+  .process-step p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+  .step-connector { position: absolute; top: 46px; right: -12px; width: 24px; height: 2px; background: var(--warm-gray); }
+  .process-step:last-child .step-connector { display: none; }
+
+  /* FAQ */
+  .faq-section { padding: 80px 0; background: var(--white); }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .faq-item { border: 1px solid var(--warm-gray); border-radius: var(--radius); overflow: hidden; transition: border-color 0.3s; }
+  .faq-item:hover { border-color: var(--red); }
+  .faq-q { padding: 18px 22px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 700; font-size: 0.9rem; gap: 12px; }
+  .faq-q::after { content: '+'; font-size: 1.3rem; color: var(--red); flex-shrink: 0; font-weight: 400; }
+  .faq-item.open .faq-q::after { content: '−'; }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease), padding 0.3s; font-size: 0.88rem; color: var(--text-body); line-height: 1.7; padding: 0 22px; }
+  .faq-item.open .faq-a { max-height: 500px; padding: 0 22px 18px; }
+
+  /* FOOTER */
+  .footer { background: var(--dark-footer); color: rgba(255,255,255,0.7); padding: 56px 0 0; }
+  .footer-main { display: grid; grid-template-columns: 1.4fr 1.2fr 0.8fr 1fr; gap: 40px; padding-bottom: 40px; }
+  .footer-brand img { height: auto; width: 240px; margin-bottom: 20px; }
+  .footer-brand p { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.6); margin-bottom: 18px; }
+  .footer-social { display: flex; gap: 10px; align-items: center; }
+  .footer-social span { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-right: 4px; }
+  .footer-social a { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.7); transition: all 0.3s; }
+  .footer-social a:hover { background: var(--red); color: var(--white); }
+  .footer h4 { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 18px; }
+  .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px; font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
+  .footer-contact-item .icon { flex-shrink: 0; margin-top: 2px; font-size: 0.9rem; }
+  .footer-contact-item a { color: rgba(255,255,255,0.65); transition: color 0.2s; }
+  .footer-contact-item a:hover { color: var(--white); }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { font-size: 0.88rem; color: rgba(255,255,255,0.65); transition: color 0.2s; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-badges { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 18px 0; text-align: center; font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+  .footer-bottom a { color: var(--gold-light); }
+  .footer-bottom a:hover { color: var(--gold-pale); }
+
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-up { animation: fadeInUp 0.7s var(--ease) forwards; opacity: 0; }
+  .d1 { animation-delay: 0.1s; } .d2 { animation-delay: 0.2s; } .d3 { animation-delay: 0.3s; } .d4 { animation-delay: 0.4s; }
+
+  @media (max-width: 1024px) {
+    .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+    .intro-image { max-width: 500px; margin: 0 auto; }
+    .materials-grid { grid-template-columns: repeat(2, 1fr); }
+    .apps-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-steps { grid-template-columns: repeat(3, 1fr); }
+    .step-connector { display: none !important; }
+    .faq-grid { grid-template-columns: 1fr; }
+    .footer-main { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    .nav { display: none; }
+    .hamburger { display: flex; }
+    .nav.open { display: flex; flex-direction: column; position: fixed; inset: 0; background: var(--white); z-index: 150; justify-content: flex-start; align-items: stretch; gap: 0; padding: 80px 20px 20px; overflow-y: auto; }
+    .nav.open > a, .nav.open .nav-item > a { font-size: 1rem; padding: 14px 20px; border-bottom: 1px solid var(--warm-gray); }
+    .nav.open .nav-item { position: static; }
+    .nav.open .dropdown { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; padding: 0; background: var(--light-gray); display: none; }
+    .nav.open .nav-item.open .dropdown { display: block; }
+    .nav.open .dropdown a { padding: 12px 20px 12px 36px; }
+    .nav.open .submenu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; background: var(--warm-gray); display: none; }
+    .nav.open .dropdown-item.open .submenu { display: block; }
+    .nav.open .submenu a { padding-left: 52px; }
+    .nav.open a.nav-cta { margin: 20px; text-align: center; }
+    .materials-grid { grid-template-columns: 1fr; }
+    .apps-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
+    .ba-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; }
+    .cta-banner .container { flex-direction: column; text-align: center; }
+    .cta-banner-actions { justify-content: center; }
+    .footer-main { grid-template-columns: 1fr; }
+    .footer-badges { flex-direction: row; }
+    .intro-stats { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .process-steps { grid-template-columns: 1fr; }
+    .hero-buttons { flex-direction: column; }
+    .hero-buttons .btn { width: 100%; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">Est. 1999 · BBB Accredited · 34+ Google Reviews</div>
+
+<header class="header">
+  <div class="container">
+    <a href="https://abfremodeling.com" class="logo-link">
+      <img src="https://abfremodeling.com/wp-content/uploads/2026/03/New-Abf-Logo-1.webp" alt="ABF Remodeling">
+    </a>
+    <nav class="nav" id="mainNav">
+      <a href="https://abfremodeling.com/">Home</a>
+      <a href="https://abfremodeling.com/about">About</a>
+      <div class="nav-item">
+        <a href="#">Our Services</a>
+        <div class="dropdown">
+          <div class="dropdown-item">
+            <a href="index.html">Kitchen Remodeling</a>
+            <div class="submenu">
+              <a href="index.html">Kitchen Remodeling</a>
+              <a href="granite-countertops.html">Granite Countertops</a>
+              <a href="cabinet-refacing.html">Custom Cabinet &amp; Cabinet Refacing</a>
+              <a href="tile-flooring.html">Tile &amp; Backsplash</a>
+            </div>
+          </div>
+          <div class="dropdown-item">
+            <a href="bathroom.html">Bathroom Remodeling</a>
+            <div class="submenu">
+              <a href="bathroom.html">Bathroom Remodeling</a>
+              <a href="bathroom-tile-flooring.html">Bathroom Tile Flooring</a>
+              <a href="bathroom-countertops.html">Bathroom Countertops</a>
+            </div>
+          </div>
+          <div class="dropdown-item">
+            <a href="https://abfremodeling.com/home-remodeling/">Home Renovation &amp; Additions</a>
+            <div class="submenu">
+              <a href="https://abfremodeling.com/home-remodeling/">Home Remodeling</a>
+              <a href="https://abfremodeling.com/room-additions/">Room Additions</a>
+              <a href="https://abfremodeling.com/attic-conversions/">Attic Conversions</a>
+              <a href="https://abfremodeling.com/new-construction/">New Construction</a>
+            </div>
+          </div>
+          <div class="dropdown-item">
+            <a href="https://abfremodeling.com/flooring/">Flooring</a>
+            <div class="submenu">
+              <a href="tile-flooring.html">Tile Flooring</a>
+              <a href="https://abfremodeling.com/flooring/">Other Flooring Types</a>
+            </div>
+          </div>
+          <div class="dropdown-item">
+            <a href="https://abfremodeling.com/outdoor-living-areas/">Outdoor Living</a>
+            <div class="submenu">
+              <a href="https://abfremodeling.com/patio-enclosures/">Patio Covers</a>
+              <a href="https://abfremodeling.com/outdoor-living-areas/">Outdoor Living Areas</a>
+            </div>
+          </div>
+          <div class="dropdown-item">
+            <a href="#">Painting</a>
+            <div class="submenu">
+              <a href="https://abfremodeling.com/interior/">Interior Painting</a>
+              <a href="https://abfremodeling.com/exterior/">Exterior Painting</a>
+            </div>
+          </div>
+          <a href="https://abfremodeling.com/roofing-services/">Roofing Services</a>
+          <a href="https://abfremodeling.com/design-build-services/">Design-Build Services</a>
+          <a href="https://abfremodeling.com/remediation/">Remediation Services</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#">Project Portfolio</a>
+        <div class="dropdown">
+          <a href="https://abfremodeling.com/kitchen-and-bath-gallery">Kitchen &amp; Bath Gallery</a>
+          <a href="https://abfremodeling.com/room-additions-gallery">Room Additions</a>
+          <a href="https://abfremodeling.com/flooring-gallery">Flooring</a>
+          <a href="https://abfremodeling.com/outdoor-living-gallery">Outdoor Living</a>
+          <a href="https://abfremodeling.com/painting-gallery">Painting</a>
+        </div>
+      </div>
+      <a href="https://abfremodeling.com/financing">Finance</a>
+      <a href="https://abfremodeling.com/blog">Blog</a>
+      <a href="https://abfremodeling.com/testimonials">Testimonials</a>
+      <a href="https://abfremodeling.com/contact-us" class="nav-cta">Contact Us</a>
+    </nav>
+    <div class="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="https://abfremodeling.com">Home</a>
+    <span class="sep">›</span>
+    <a href="index.html">Kitchen Remodeling</a>
+    <span class="sep">›</span>
+    <span class="current">Tile Flooring &amp; Backsplash</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img src="https://abfremodeling.com/wp-content/uploads/2025/09/1.png" alt="Tile Flooring Installation Houston"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge fade-up">Houston Tile Contractors &amp; Installers</div>
+      <h1 class="fade-up d1">Expert <span class="accent">Tile Flooring &amp; Backsplash</span> Installation</h1>
+      <p class="hero-desc fade-up d2">From kitchen backsplashes to shower walls and floors, ABF Remodeling delivers unmatched beauty and durability with cost-efficient tile installation throughout the Houston Metro Area.</p>
+      <div class="hero-buttons fade-up d3">
+        <a href="https://abfremodeling.com/contact-us/" class="btn btn-red btn-lg">Get a Free Estimate</a>
+        <a href="tel:281-855-3400" class="btn btn-outline-white btn-lg">Call 281-855-3400</a>
+      </div>
+      <div class="hero-trust fade-up d4">
+        <span><strong>9+</strong> Tile Material Types</span>
+        <span><strong>Entire</strong> Houston Metro</span>
+        <span><strong>25+</strong> Years Experience</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA #1: FINANCING -->
+<div class="cta-banner cta-financing">
+  <div class="container">
+    <div class="cta-banner-text">
+      <h3>Finance Your Tile Project</h3>
+      <p>From a single backsplash to whole-home flooring — flexible financing makes premium tile installation affordable. Apply in minutes.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a href="https://abfremodeling.com/financing/" class="btn btn-white btn-lg">Apply Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro-section">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-image">
+        <div class="intro-tile-pattern">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="intro-text">
+        <div class="overline">Tile Flooring Design Expertise</div>
+        <h2>Unmatched Beauty. Built to Last.</h2>
+        <p>Tile flooring delivers unmatched beauty and durability with a cost-efficient alternative that provides years of use. Available in an ever-evolving range of colors, sizes, and textures — tile lets you custom design floors bound only by your imagination.</p>
+        <p>Focusing on high-quality porcelain and ceramic flooring, our custom tile team uses extensive combined experience to deliver stunning results for kitchens, baths, living areas, and patios. We simply strive for perfection — and expect to deliver it on time and under budget.</p>
+        <div class="intro-stats">
+          <div>
+            <div class="intro-stat-num">9+</div>
+            <div class="intro-stat-label">Tile Materials Installed</div>
+          </div>
+          <div>
+            <div class="intro-stat-num">25+</div>
+            <div class="intro-stat-label">Years of Tile Expertise</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TILE MATERIALS -->
+<section class="materials-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-left:auto; margin-right:auto;">
+      <div class="overline">Materials We Install</div>
+      <h2>Every Tile Type Under One Roof</h2>
+      <p style="margin-left:auto; margin-right:auto;">High-quality installation of ceramic, porcelain, natural stone, glass, and specialty tiles. We furnish, fabricate, cut, clean, polish, seal, and repair every material we install.</p>
+    </div>
+    <div class="materials-grid">
+      <div class="material-card">
+        <div class="material-swatch mat-ceramic"></div>
+        <div class="material-info">
+          <h4>Ceramic Tile</h4>
+          <p>Classic, durable, and budget-friendly — endless color and pattern options for any room.</p>
+        </div>
+      </div>
+      <div class="material-card">
+        <div class="material-swatch mat-porcelain"></div>
+        <div class="material-info">
+          <h4>Porcelain Tile</h4>
+          <p>Denser and more water-resistant than ceramic — ideal for high-traffic floors and wet areas.</p>
+        </div>
+      </div>
+      <div class="material-card">
+        <div class="material-swatch mat-marble"></div>
+        <div class="material-info">
+          <h4>Marble</h4>
+          <p>Luxurious natural stone with elegant veining — adds timeless sophistication to any space.</p>
+        </div>
+      </div>
+      <div class="material-card">
+        <div class="material-swatch mat-travertine"></div>
+        <div class="material-info">
+          <h4>Travertine</h4>
+          <p>Warm, organic natural stone with rich tonal variation — perfect for floors and patios.</p>
+        </div>
+      </div>
+      <div class="material-card">
+        <div class="material-swatch mat-granite"></div>
+        <div class="material-info">
+          <h4>Granite</h4>
+          <p>Extremely durable natural stone tile — great for high-wear floors and feature walls.</p>
+        </div>
+      </div>
+      <div class="material-card">
+        <div class="material-swatch mat-glass"></div>
+        <div class="material-info">
+          <h4>Glass Tile</h4>
+          <p>Reflective, modern, and luminous — beautifully suited to backsplashes and accent walls.</p>
+        </div>
+      </div>
+      <div class="material-card">
+        <div class="material-swatch mat-limestone"></div>
+        <div class="material-info">
+          <h4>Limestone</h4>
+          <p>Soft, neutral tones and a refined matte finish — ideal for understated, elegant interiors.</p>
+        </div>
+      </div>
+      <div class="material-card">
+        <div class="material-swatch mat-saltillo"></div>
+        <div class="material-info">
+          <h4>Saltillo Tile</h4>
+          <p>Handmade terracotta tiles with rustic character — a Southwest classic for warm interiors.</p>
+        </div>
+      </div>
+      <div class="material-card">
+        <div class="material-swatch mat-mosaic"></div>
+        <div class="material-info">
+          <h4>Mosaic Tile</h4>
+          <p>Intricate patterns and color combinations — perfect for backsplashes, showers, and accents.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="applications-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-left:auto; margin-right:auto;">
+      <div class="overline">Where We Install</div>
+      <h2>Tile for Every Surface in Your Home</h2>
+      <p style="margin-left:auto; margin-right:auto;">From small backsplashes to entire floors — we install tile in any space you want to showcase.</p>
+    </div>
+    <div class="apps-grid">
+      <div class="app-card">
+        <div class="app-icon">🍳</div>
+        <div>
+          <h4>Kitchen Backsplashes</h4>
+          <p>Statement-making backsplashes from subway tile to designer mosaics.</p>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">🚿</div>
+        <div>
+          <h4>Shower Walls</h4>
+          <p>Waterproof, beautiful shower surrounds with seamless installation.</p>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">🏠</div>
+        <div>
+          <h4>Floor Installation</h4>
+          <p>Tile floors for kitchens, baths, entries, living areas, and patios.</p>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">🍷</div>
+        <div>
+          <h4>Bar Backdrops</h4>
+          <p>Eye-catching feature walls for home bars and entertainment spaces.</p>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">🛁</div>
+        <div>
+          <h4>Bathroom Floors &amp; Walls</h4>
+          <p>Spa-quality bathroom installations from floors to ceiling.</p>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">☀️</div>
+        <div>
+          <h4>Outdoor &amp; Patios</h4>
+          <p>Weather-rated tile installations for outdoor living spaces.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES STRIP -->
+<section class="services-strip">
+  <div class="container">
+    <div class="services-strip-header">
+      <div class="overline">Full Service Tile Contractors</div>
+      <h3>We Handle Everything, Start to Finish</h3>
+    </div>
+    <div class="services-list">
+      <div class="service-chip">Furnish</div>
+      <div class="service-chip">Fabricate</div>
+      <div class="service-chip">Cut</div>
+      <div class="service-chip">Install</div>
+      <div class="service-chip">Clean</div>
+      <div class="service-chip">Polish</div>
+      <div class="service-chip">Seal</div>
+      <div class="service-chip">Repair</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-left:auto; margin-right:auto;">
+      <div class="overline">Why Choose ABF Remodeling</div>
+      <h2>Houston's Trusted Tile Installers</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">25+</div>
+        <h4>Years of Experience</h4>
+        <p>Installing tile across Houston since 1999.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">✓</div>
+        <h4>Superior Craftsmanship</h4>
+        <p>Personally performed installations with pride.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">★</div>
+        <h4>Premium Materials</h4>
+        <p>High-quality tile from trusted manufacturers.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">⏱</div>
+        <h4>On Time, On Budget</h4>
+        <p>We strive for perfection — and deliver it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE/AFTER -->
+<section class="ba-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-left:auto; margin-right:auto;">
+      <div class="overline">Our Work</div>
+      <h2>Real Tile Transformations</h2>
+      <p style="margin-left:auto; margin-right:auto;">From dated to designer — see how new tile transforms a space.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-card"><span class="ba-label">Before</span><img src="https://abfremodeling.com/wp-content/uploads/2026/03/IMG_75231-1024x768.jpg" alt="Tile Flooring Before"></div>
+      <div class="ba-card"><span class="ba-label ba-label-after">After</span><img src="https://abfremodeling.com/wp-content/uploads/2026/03/IMG_77341-1024x768.jpg" alt="Tile Flooring After"></div>
+    </div>
+    <div style="text-align:center; margin-top:32px;">
+      <a href="https://abfremodeling.com/flooring-gallery" class="btn btn-outline-dark">View Flooring Gallery →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA #2: FREE QUOTE -->
+<div class="cta-banner cta-quote">
+  <div class="container">
+    <div class="cta-banner-text">
+      <h3>Request a Free Tile Installation Quote</h3>
+      <p>Discover the benefits of tile flooring from the experts themselves. Schedule your free project estimate today — no obligation.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a href="https://abfremodeling.com/contact-us/" class="btn btn-white btn-lg">Get Free Quote</a>
+      <a href="https://abfremodeling.com/financing/" class="btn btn-outline-white btn-lg">Get Pre-Approved</a>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-left:auto; margin-right:auto;">
+      <div class="overline">How It Works</div>
+      <h2>Our Tile Installation Process</h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h4>Consultation</h4>
+        <p>We assess the space and discuss your vision.</p>
+        <div class="step-connector"></div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h4>Tile Selection</h4>
+        <p>Pick your material, color, size, and pattern.</p>
+        <div class="step-connector"></div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h4>Surface Prep</h4>
+        <p>Proper substrate prep for a long-lasting install.</p>
+        <div class="step-connector"></div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <h4>Installation</h4>
+        <p>Precise cutting, setting, and grouting.</p>
+        <div class="step-connector"></div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">5</div>
+        <h4>Seal &amp; Finish</h4>
+        <p>Final clean, polish, and seal for protection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-left:auto; margin-right:auto; margin-bottom:36px;">
+      <div class="overline">FAQs</div>
+      <h2>Tile Installation Questions, Answered</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">What's the difference between ceramic and porcelain tile?</div>
+        <div class="faq-a">Both are made from clay, but porcelain is fired at higher temperatures, making it denser, harder, and more water-resistant. Ceramic is more budget-friendly and easier to cut; porcelain is the better choice for high-traffic floors and wet areas like showers.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">How long does tile installation take?</div>
+        <div class="faq-a">A typical kitchen backsplash takes 1–3 days. A full bathroom can take 3–7 days. Larger floor installations and natural stone projects may take 1–2 weeks depending on size, prep work, and material. We'll provide a clear timeline at consultation.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">What tile is best for Houston's climate?</div>
+        <div class="faq-a">Porcelain and ceramic tile are excellent for Houston's humidity — they don't absorb moisture or warp. Natural stones like travertine and marble look stunning but require sealing to handle humidity. For outdoor patios, weather-rated porcelain is the way to go.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Do I need to seal my tile?</div>
+        <div class="faq-a">Ceramic and porcelain are non-porous and don't require sealing — only the grout lines do. Natural stones (marble, travertine, limestone, saltillo) are porous and need to be sealed at install and periodically afterward to resist stains. We seal every natural stone install before handover.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Can you install tile over existing flooring?</div>
+        <div class="faq-a">Sometimes — it depends on the existing surface, levelness, and structural support. In many cases removal of old flooring gives a better, longer-lasting result. We'll evaluate your specific situation during consultation and recommend the right approach.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Do you do repair work too?</div>
+        <div class="faq-a">Yes — we repair cracked tiles, regrout, refinish, polish, and seal existing installations. If you have a tile floor or backsplash that just needs a refresh rather than a full replacement, we can help with that too.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">What areas do you serve?</div>
+        <div class="faq-a">We provide tile installation services throughout the entire Houston Metro Area, including Houston, River Oaks, Copperfield, Cypress, Memorial, Sugarland, and surrounding communities.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Do you offer financing?</div>
+        <div class="faq-a">Yes — flexible financing is available for tile installation projects. Get pre-approved in minutes through our financing page so you can choose the premium tile you really want.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA #3: CALL US -->
+<div class="cta-banner cta-call">
+  <div class="container">
+    <div class="cta-banner-text">
+      <h3>Ready to Transform Your Space with Tile?</h3>
+      <p>Serving the entire Houston Metro Area — Houston, River Oaks, Copperfield, Cypress, Memorial, Sugarland, and surrounding areas.</p>
+      <div class="phone-number"><a href="tel:281-855-3400" style="color:var(--white);">281-855-3400</a></div>
+    </div>
+    <div class="cta-banner-actions">
+      <a href="tel:281-855-3400" class="btn btn-white btn-lg">Call Us Now</a>
+      <a href="https://abfremodeling.com/contact-us/" class="btn btn-outline-white btn-lg">Request Quote Online</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="image assets/ABF_logo_transparent.png" alt="ABF Remodeling">
+        <p>A Beautiful Floor, Inc. DBA, ABF Remodeling established in April 1999 located in Houston, Texas is a premier residential and commercial remodeling and flooring company.</p>
+        <div class="footer-social">
+          <span>Follow us:</span>
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="X">X</a>
+          <a href="#" title="Instagram">ig</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item"><span class="icon">📍</span><span>Address<br><a href="https://goo.gl/maps/7HfhP7ds1RCPLx6d6">8719 Hwy 6 N, Houston, TX 77095</a></span></div>
+        <div class="footer-contact-item"><span class="icon">✉️</span><span>Email<br><a href="mailto:info@abfremodeling.com">info@abfremodeling.com</a></span></div>
+        <div class="footer-contact-item"><span class="icon">📞</span><span>Phone<br><a href="tel:281-855-3400">281-855-3400</a></span></div>
+      </div>
+      <div>
+        <h4>Useful link</h4>
+        <ul class="footer-links">
+          <li><a href="https://abfremodeling.com/remodeling">Services</a></li>
+          <li><a href="https://abfremodeling.com/about">About</a></li>
+          <li><a href="https://abfremodeling.com/testimonials">Testimonials</a></li>
+          <li><a href="https://abfremodeling.com/contact-us">Contact Us</a></li>
+          <li><a href="https://abfremodeling.com/kitchen-bath-remodeling">Projects</a></li>
+        </ul>
+      </div>
+      <div class="footer-badges">
+        <img src="image assets/NARI_logo.png" alt="NARI Member" style="height:80px;width:auto;">
+        <img src="image assets/bbb_accredited.png" alt="BBB A+ Accredited Business" style="height:80px;width:auto;">
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      Copyright © 2026 ABF Remodeling | All Rights Reserved | <a href="https://abfremodeling.com/privacy-policy-for-abf-remodeling/">Privacy Policy</a> | Designed by <a href="https://theclaymedia.com">THECLAYMEDIA</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() {
+    document.getElementById('mainNav').classList.toggle('open');
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    const navItems = document.querySelectorAll('.nav-item > a');
+    const dropdownItems = document.querySelectorAll('.dropdown-item > a');
+    navItems.forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) { e.preventDefault(); this.parentElement.classList.toggle('open'); }
+      });
+    });
+    dropdownItems.forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) { e.preventDefault(); this.parentElement.classList.toggle('open'); }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
